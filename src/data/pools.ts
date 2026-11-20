@@ -19,10 +19,20 @@ export type PoolData = {
   skins: Skin[];
 };
 
+/**
+ * Un agente entra en el pool del Clásico solo si tiene datos suficientes para dar pistas:
+ * género y año conocidos y como mucho un TODO más (sin contar los puntos de ulti).
+ */
+export function isClassicReady(a: Agent): boolean {
+  if (a.gender === TODO || a.releaseYear === TODO) return false;
+  const others = [a.species, a.origin, a.affiliation].filter((v) => v === TODO).length;
+  return others <= 1;
+}
+
 /** Ids que forman el pool de cada modo (lo que puede salir como respuesta). */
 export function poolIds(data: PoolData) {
   return {
-    classic: data.agents.map((a) => a.id),
+    classic: data.agents.filter(isClassicReady).map((a) => a.id),
     ability: data.abilities.map((a) => a.id),
     quote: data.quotes.map(quoteId),
     emoji: data.agents

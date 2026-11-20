@@ -61,3 +61,14 @@ describe("datos generados", () => {
     for (const id of Object.keys(emojis)) expect(ids).toContain(id);
   });
 });
+
+describe("pools", () => {
+  it("el Clásico solo incluye agentes con datos suficientes", async () => {
+    const { isClassicReady } = await import("@/data/pools");
+    const registry = (await import("@/data/generated/registry/classic.json")).default;
+    for (const id of Object.keys(registry)) {
+      const a = agents.find((x) => x.id === id)!;
+      expect(isClassicReady(a as never), id).toBe(true);
+    }
+  });
+});

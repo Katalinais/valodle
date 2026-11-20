@@ -140,7 +140,7 @@ export const useGameStore = create<Store>()(
     {
       name: "valorantdle",
       version: 1,
-      storage: createJSONStorage(() => localStorage),
+      storage: createJSONStorage(() => window.localStorage),
       // Rehidratamos a mano tras el montaje para evitar desajustes de hidratación (export estático).
       skipHydration: true,
       partialize: (s) => ({ games: s.games, stats: s.stats, settings: s.settings }),
