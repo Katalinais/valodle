@@ -12,7 +12,8 @@
     "test:watch": "vitest",
     "e2e": "playwright test",
     "data": "tsx scripts/build-data.ts",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "images": "tsx scripts/localize-images.ts"
   },
   "dependencies": {
     "framer-motion": "^14.14.0",

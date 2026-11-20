@@ -6,7 +6,6 @@
  *
  * Los JSON generados se commitean: el build del sitio no depende de la API.
  */
-import { createHash } from "node:crypto";
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import path from "node:path";
@@ -33,6 +32,8 @@ import {
 } from "../src/data/schema";
 import { excludeReason, pickSkinImage, type ExcludeReason, type RawSkin } from "./lib/skins-filter";
 import { MASK_GRID, computePoi } from "./lib/poi";
+import { CACHE_DIR, loadImage } from "./lib/images";
+import { localizeGenerated } from "./localize-images";
 import { poolIds } from "../src/data/pools";
 import { config } from "../src/config";
 import { dateKeyIn, dayNumberToKey, keyToDayNumber } from "../src/lib/daily";
@@ -40,7 +41,6 @@ import { dateKeyIn, dayNumberToKey, keyToDayNumber } from "../src/lib/daily";
 const ROOT = path.resolve(import.meta.dirname, "..");
 const OUT = path.join(ROOT, "src/data/generated");
 const MANUAL = path.join(ROOT, "src/data/manual");
-const CACHE = path.join(ROOT, ".cache/images");
 const API = "https://valorant-api.com/v1";
 
 type Lang = "en-US" | "es-MX";
@@ -204,23 +204,6 @@ async function buildTiers() {
 
 /* ---------------- máscaras de opacidad (sharp) ---------------- */
 
-async function loadImage(url: string): Promise<Buffer> {
-  const file = path.join(CACHE, createHash("sha1").update(url).digest("hex") + ".png");
-  if (existsSync(file)) return readFile(file);
-  for (let attempt = 1; ; attempt++) {
-    try {
-      const res = await fetch(url);
-      if (!res.ok) throw new Error(`${res.status}`);
-      const buf = Buffer.from(await res.arrayBuffer());
-      await writeFile(file, buf);
-      return buf;
-    } catch (err) {
-      if (attempt >= 3) throw new Error(`No se pudo descargar ${url}: ${String(err)}`);
-      await new Promise((r) => setTimeout(r, 500 * attempt));
-    }
-  }
-}
-
 async function opacityMask(buf: Buffer) {
   const img = sharp(buf).ensureAlpha();
   const meta = await img.metadata();
@@ -311,7 +294,7 @@ async function buildSkins(tiers: TierInfo[]) {
     }
   }
 
-  await mkdir(CACHE, { recursive: true });
+  await mkdir(CACHE_DIR, { recursive: true });
   console.log(`Analizando opacidad de ${candidates.length} imágenes (con caché en .cache/)…`);
   const masks: SkinMask[] = [];
   const skins: Skin[] = await mapLimit(candidates, 12, async (c) => {
@@ -404,6 +387,9 @@ async function main() {
     path.join(ROOT, "tests/fixtures/skin-masks.json"),
     JSON.stringify(z.array(SkinMaskSchema).parse(masks)) + "\n",
   );
+
+  // Autoalojar imágenes (public/img) y reescribir las rutas en los JSON generados.
+  await localizeGenerated();
 
   const quotesPerAgent = new Map<string, number>();
   for (const q of quotes) quotesPerAgent.set(q.agentId, (quotesPerAgent.get(q.agentId) ?? 0) + 1);
