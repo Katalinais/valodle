@@ -1,0 +1,19 @@
+{
+  "meta": {
+    "description": "Adivina el agente, la habilidad, la frase, el emoji y la skin del día. Un reto nuevo cada día."
+  },
+  "nav": {
+    "home": "Inicio",
+    "language": "Idioma",
+    "switchTo": "English"
+  },
+  "home": {
+    "tagline": "Adivina el agente y la skin del día",
+    "streak": "Racha"
+  },
+  "footer": {
+    "disclaimer": "{site} no está respaldado por Riot Games y no refleja las opiniones de Riot Games ni de nadie oficialmente involucrado en la producción o gestión de las propiedades de Riot Games. Riot Games y todas las propiedades asociadas son marcas comerciales o registradas de Riot Games, Inc.",
+    "credits": "Datos e imágenes vía {api}.",
+    "fanProject": "Proyecto de fans no oficial y gratuito."
+  }
+}

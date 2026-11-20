@@ -1,26 +1,59 @@
 @import "tailwindcss";
 
+@theme {
+  --color-val-red: #ff4655;
+  --color-val-red-dark: #bd3944;
+  --color-val-ink: #0f1923;
+  --color-val-ink-2: #1b2733;
+  --color-val-ink-3: #2a3948;
+  --color-val-cream: #ece8e1;
+  --color-val-muted: #9aa4ad;
+
+  --color-hit: #3fa34d;
+  --color-partial: #e08a1e;
+  --color-miss: #c8323f;
+
+  --font-display: var(--font-bebas), "Oswald", "Arial Narrow", sans-serif;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: dark;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Alto contraste: colores más saturados y bordes marcados. */
+html[data-contrast="high"] {
+  --color-hit: #00c853;
+  --color-partial: #ffab00;
+  --color-miss: #ff1744;
+  --color-val-muted: #d7dde2;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-val-ink);
+  color: var(--color-val-cream);
+  font-family: var(--font-sans);
+}
+
+/* Fondo con un patrón diagonal sutil */
+.bg-stripes {
+  background-image: repeating-linear-gradient(
+    135deg,
+    rgb(255 255 255 / 0.015) 0 2px,
+    transparent 2px 14px
+  );
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-val-red);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
 }

@@ -1,0 +1,19 @@
+{
+  "meta": {
+    "description": "Guess the agent, ability, quote, emoji and skin of the day. A new challenge every day."
+  },
+  "nav": {
+    "home": "Home",
+    "language": "Language",
+    "switchTo": "Español"
+  },
+  "home": {
+    "tagline": "Guess today's agent and skin",
+    "streak": "Streak"
+  },
+  "footer": {
+    "disclaimer": "{site} isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games, and all associated properties are trademarks or registered trademarks of Riot Games, Inc.",
+    "credits": "Data and images via {api}.",
+    "fanProject": "Unofficial, free fan project."
+  }
+}
