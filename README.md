@@ -1,36 +1,96 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Valorantdle
 
-## Getting Started
+Juego diario de adivinanzas de fans sobre VALORANT. Hay cinco modos (**Clásico, Habilidad, Frase, Emoji y Skin**) y un reto nuevo cada día, igual para todos los jugadores. El reto se reinicia a medianoche en `America/Bogota`.
 
-First, run the development server:
+Es un sitio 100 % estático (Next.js con `output: "export"`): no tiene backend, y el progreso, las rachas y las estadísticas se guardan en `localStorage`.
+
+> Proyecto de fans no oficial y gratuito. Valorantdle no está respaldado por Riot Games y no refleja las opiniones de Riot Games ni de nadie oficialmente involucrado en la producción o gestión de las propiedades de Riot Games. Riot Games y todas las propiedades asociadas son marcas comerciales o registradas de Riot Games, Inc. Los datos y las imágenes provienen de [valorant-api.com](https://valorant-api.com).
+
+## Requisitos
+
+- Node 20 o superior (desarrollado con Node 26)
+- npm
+
+## Scripts
+
+| Comando                              | Qué hace                                                                         |
+| ------------------------------------ | -------------------------------------------------------------------------------- |
+| `npm run dev`                        | Servidor de desarrollo en http://localhost:3000                                  |
+| `npm run build`                      | Export estático en `out/`                                                        |
+| `npm start`                          | Sirve `out/` en http://localhost:3000                                            |
+| `npm run lint` / `npm run typecheck` | ESLint / TypeScript                                                              |
+| `npm test`                           | Tests unitarios (Vitest)                                                         |
+| `npm run e2e`                        | Tests e2e (Playwright, móvil). La primera vez: `npx playwright install chromium` |
+| `npm run data`                       | Regenera los datos desde valorant-api.com (ver abajo)                            |
+| `npx tsx scripts/make-icons.ts`      | Regenera los iconos PWA y `public/og.png`                                        |
+
+## Actualizar los datos (nuevo agente, bundle o skin)
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run data
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+El script `scripts/build-data.ts` hace esto:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Descarga agentes, armas/skins, tiers y contratos de valorant-api.com en `en-US` y `es-MX`.
+2. Mezcla los agentes con los datos manuales de `src/data/manual/` y lo valida todo con Zod.
+3. **Filtra solo las skins de pago**: con tier asignado, sin las _Standard_ ni _Random Favorite_, y **sin las recompensas de contratos** (pases de batalla, contratos de agente y pases de evento). La API ya asigna tier a muchas skins de pase, así que filtrar por tier no basta.
+4. Descarga cada imagen de skin (con caché en `.cache/`) y calcula con `sharp` una máscara de opacidad y el **punto de interés** del zoom.
+5. Actualiza los **registros diarios** (`src/data/generated/registry/*.json`).
+6. Imprime un resumen: skins incluidas y descartadas por motivo, y los `TODO` pendientes.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Revisa el diff y commitea los JSON generados: el build no llama a la API.
 
-## Learn More
+### Cuando sale un agente nuevo
 
-To learn more about Next.js, take a look at the following resources:
+El script **falla** si un agente de la API no tiene entrada en `src/data/manual/agents.manual.json`, y te dice cuál falta. Añádelo así:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```json
+"nuevoagente": {
+  "gender": "female",            // male | female | nonbinary | "TODO"
+  "species": "radiant",          // human | radiant | radivoid | robot | other | "TODO"
+  "origin": ["KR"],              // códigos ISO 3166-1 (o "unknown"); varios = coincidencia parcial
+  "releaseYear": 2026,
+  "releaseEpisode": "S2026 A6",
+  "ultPoints": 8,
+  "affiliation": "protocol"      // protocol | kingdom | alpha-omega | independent | "TODO"
+}
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Lo que no puedas verificar déjalo como `"TODO"`: en el Clásico se muestra como "dato pendiente" (gris), nunca como un acierto o un fallo inventado. Un agente con demasiados `TODO` no entra en el pool del Clásico hasta que se completen sus datos. Añade también 5 emojis en `emojis.json` y, si puedes, frases en `quotes.json`.
 
-## Deploy on Vercel
+## Cómo se elige el reto del día (y por qué no cambian los días pasados)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Está en `src/lib/daily.ts`:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- El día _N_ se cuenta desde `EPOCH = 2026-12-01` (en `src/config.ts`). Antes de esa fecha el sitio muestra una "pretemporada" con una baraja aparte.
+- Cada modo tiene un registro **append-only** con `id → fecha de alta`. `npm run data` añade los ids nuevos con fecha de alta = **mañana** y nunca borra ni modifica entradas.
+- Las respuestas se generan por **ciclos**: cada ciclo es una baraja determinista (mulberry32, sembrada con modo + `SALT` + nº de ciclo) de todos los elementos dados de alta hasta ese momento. No se repite ninguna respuesta hasta recorrer el pool entero.
+- Los elementos que entran a mitad de ciclo se añaden **al final del ciclo en curso**, así que ningún día ya jugado cambia de respuesta. Hay un test que lo comprueba (`tests/unit/daily.test.ts`).
+- **No cambies** `epoch`, `salt` ni el orden de los ciclos una vez publicado el sitio.
+
+## Despliegue
+
+### Vercel (recomendado)
+
+1. Importa el repositorio en Vercel. `vercel.json` ya configura el build y `out/` como salida.
+2. Define la variable `NEXT_PUBLIC_SITE_URL` con tu dominio (por ejemplo `https://valorantdle.vercel.app`). Se usa en el enlace de "Compartir", el sitemap y los metadatos OG.
+
+### GitHub Pages / cualquier hosting estático
+
+`npm run build` y sube la carpeta `out/`. Si se sirve desde un subdirectorio, configura `basePath` en `next.config.ts`.
+
+## Estructura
+
+```
+scripts/build-data.ts      # generación de datos (+ scripts/lib: filtro de skins, POI)
+src/app/[locale]/…         # páginas por idioma (es/en): inicio y un modo por carpeta
+src/components/            # GuessInput, ClassicGrid, ZoomImage, WinPanel, StatsModal…
+src/components/modes/      # lógica de cada modo
+src/lib/                   # daily, compare, normalize, share, zoom…
+src/store/gameStore.ts     # zustand + persist (clave modo:fecha)
+src/data/manual/           # datos que no da la API (editar a mano)
+src/data/generated/        # JSON generados (no editar a mano)
+src/i18n/                  # es.json / en.json
+tests/unit, tests/e2e      # Vitest / Playwright
+```
