@@ -7,7 +7,7 @@ export default defineConfig({
   timeout: 60_000,
   use: { baseURL: `http://localhost:${PORT}`, ...devices["Pixel 7"] },
   webServer: {
-    command: `npm run build && npx serve out -l ${PORT}`,
+    command: `NEXT_DIST_DIR=.next-e2e npm run build && npx serve out -l ${PORT}`,
     url: `http://localhost:${PORT}/es/`,
     reuseExistingServer: !process.env.CI,
     timeout: 240_000,
