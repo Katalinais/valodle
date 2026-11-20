@@ -51,7 +51,7 @@
   "guess": {
     "submit": "Guess",
     "agentPlaceholder": "Type an agent name…",
-    "skinPlaceholder": "Type a skin (e.g. Reaver Vandal)…",
+    "skinPlaceholder": "Skin name…",
     "attempts": "Attempts: {n}"
   },
   "win": {

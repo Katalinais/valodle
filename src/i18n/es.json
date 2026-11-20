@@ -51,7 +51,7 @@
   "guess": {
     "submit": "Adivinar",
     "agentPlaceholder": "Escribe el nombre de un agente…",
-    "skinPlaceholder": "Escribe una skin (p. ej. Reaver Vandal)…",
+    "skinPlaceholder": "Nombre de la skin…",
     "attempts": "Intentos: {n}"
   },
   "win": {
