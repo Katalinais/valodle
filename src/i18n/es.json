@@ -120,8 +120,7 @@
     "roleHint": "Pista: su rol es {role}",
     "roleHintIn": "Pista de rol en {n} intento(s)",
     "audioHint": "Pista: escucha la línea",
-    "audioHintIn": "Pista de audio en {n} intento(s)",
-    "translated": "Traducción no oficial"
+    "audioHintIn": "Pista de audio en {n} intento(s)"
   },
   "emoji": {
     "revealIn": "Siguiente emoji en el próximo fallo",

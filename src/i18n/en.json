@@ -120,8 +120,7 @@
     "roleHint": "Hint: their role is {role}",
     "roleHintIn": "Role hint in {n} attempt(s)",
     "audioHint": "Hint: listen to the line",
-    "audioHintIn": "Audio hint in {n} attempt(s)",
-    "translated": "Unofficial translation"
+    "audioHintIn": "Audio hint in {n} attempt(s)"
   },
   "emoji": {
     "revealIn": "Next emoji on your next miss",

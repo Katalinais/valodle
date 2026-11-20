@@ -50,7 +50,7 @@ test("Frase: pista de rol a los 4 fallos y se gana", async ({ page }) => {
   const qid = todaysAnswer("quote", quoteRegistry);
   const quote = quotes.find((q) => quoteId(q) === qid)!;
   await page.goto("/es/frase/");
-  await expect(page.getByTestId("quote-text")).toContainText(quote.text.es);
+  await expect(page.getByTestId("quote-text")).toContainText(quote.text.en);
   await missTimes(page, quote.agentId, 4);
   await expect(page.getByTestId("hint-role")).toHaveAttribute("data-unlocked", "true");
   await guess(page, nameOf(quote.agentId));

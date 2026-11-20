@@ -40,9 +40,11 @@ export const AgentsManualSchema = z.record(z.string(), AgentManualSchema);
 
 export const QuoteSchema = z.object({
   agentId: z.string(),
-  text: LocalizedSchema,
-  /** false = el texto en ese idioma es traducción propia, no la línea doblada oficial. */
-  official: z.object({ es: z.boolean(), en: z.boolean() }),
+  /**
+   * Línea de voz original en inglés. `es` es opcional y solo debe usarse con la línea
+   * oficial del doblaje (nunca con traducciones propias).
+   */
+  text: z.object({ en: z.string().min(1), es: z.string().min(1).optional() }),
   audioUrl: z.string().url().optional(),
 });
 export type Quote = z.infer<typeof QuoteSchema>;

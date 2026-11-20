@@ -57,14 +57,10 @@ export function QuoteGame() {
             <blockquote
               className="font-display text-3xl leading-tight tracking-wide"
               data-testid="quote-text"
+              lang={quote.text[locale] ? locale : "en"}
             >
-              “{quote.text[locale]}”
+              “{quote.text[locale] ?? quote.text.en}”
             </blockquote>
-            {!quote.official[locale] && (
-              <figcaption className="mt-2 text-xs text-val-muted">
-                {t("quote.translated")}
-              </figcaption>
-            )}
           </figure>
           {!game.won && (
             <>
