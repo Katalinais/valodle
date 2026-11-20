@@ -4,6 +4,9 @@ import { z } from "zod";
 export const TODO = "TODO" as const;
 const todo = z.literal(TODO);
 
+/** Imagen: ruta local servida desde public/ ("/img/...") o, como respaldo, URL remota. */
+export const ImageSrcSchema = z.string().regex(/^(\/img\/|https:\/\/)/);
+
 export const LocalizedSchema = z.object({ es: z.string().min(1), en: z.string().min(1) });
 export type Localized = z.infer<typeof LocalizedSchema>;
 
@@ -59,7 +62,7 @@ export const AbilitySchema = z.object({
   agentId: z.string(),
   key: z.enum(ABILITY_KEYS),
   name: LocalizedSchema,
-  icon: z.string().url(),
+  icon: ImageSrcSchema,
 });
 export type Ability = z.infer<typeof AbilitySchema>;
 
@@ -67,9 +70,9 @@ export const AgentSchema = z.object({
   id: z.string(),
   uuid: z.string(),
   name: LocalizedSchema,
-  role: z.object({ id: z.string(), name: LocalizedSchema, icon: z.string().url() }),
-  icon: z.string().url(),
-  portrait: z.string().url().nullable(),
+  role: z.object({ id: z.string(), name: LocalizedSchema, icon: ImageSrcSchema }),
+  icon: ImageSrcSchema,
+  portrait: ImageSrcSchema.nullable(),
   ...AgentManualSchema.shape,
 });
 export type Agent = z.infer<typeof AgentSchema>;
@@ -78,7 +81,7 @@ export const TierInfoSchema = z.object({
   id: z.string(),
   name: z.enum(TIERS),
   rank: z.number(),
-  icon: z.string().url(),
+  icon: ImageSrcSchema,
   color: z.string(),
 });
 export type TierInfo = z.infer<typeof TierInfoSchema>;
@@ -90,7 +93,7 @@ export const SkinSchema = z.object({
   weaponName: LocalizedSchema,
   weaponCategory: z.string(),
   tier: z.enum(TIERS),
-  image: z.string().url(),
+  image: ImageSrcSchema,
   isMelee: z.boolean(),
   /** Relación de aspecto (ancho/alto) de la imagen. */
   aspect: z.number().positive(),
