@@ -8,6 +8,9 @@ export function StoreHydrator() {
   const highContrast = useGameStore((s) => s.settings.highContrast);
   useEffect(() => {
     void useGameStore.persist.rehydrate();
+    if (process.env.NODE_ENV === "production" && "serviceWorker" in navigator) {
+      navigator.serviceWorker.register("/sw.js").catch(() => {});
+    }
   }, []);
   useEffect(() => {
     document.documentElement.dataset.contrast = highContrast ? "high" : "normal";

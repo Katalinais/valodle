@@ -21,7 +21,14 @@ export function modeMetadata(mode: ModeId) {
         canonical: `/${locale}/${slug}/`,
         languages: Object.fromEntries(config.locales.map((l) => [l, `/${l}/${slug}/`])),
       },
-      openGraph: { title: `${title} · ${config.siteName}`, description, locale },
+      openGraph: {
+        title: `${title} · ${config.siteName}`,
+        description,
+        locale,
+        type: "website",
+        siteName: config.siteName,
+        images: [{ url: "/og.png", width: 1200, height: 630 }],
+      },
     };
   };
 }

@@ -11,6 +11,15 @@ export const metadata: Metadata = {
   metadataBase: new URL(config.siteUrl),
   title: { default: config.siteName, template: `%s · ${config.siteName}` },
   description: dictionaries[config.defaultLocale].meta.description,
+  applicationName: config.siteName,
+  appleWebApp: { capable: true, title: config.siteName, statusBarStyle: "black-translucent" },
+  icons: { apple: "/apple-touch-icon.png" },
+  openGraph: {
+    type: "website",
+    siteName: config.siteName,
+    images: [{ url: "/og.png", width: 1200, height: 630 }],
+  },
+  twitter: { card: "summary_large_image" },
 };
 
 export const viewport: Viewport = {
