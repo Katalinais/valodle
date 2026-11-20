@@ -82,7 +82,10 @@ export async function localize(
   report: LocalizeReport,
   manifest: ImageManifest,
 ): Promise<string> {
-  if (!isRemote(src)) return src;
+  if (!isRemote(src)) {
+    report.reused++;
+    return src;
+  }
   const rel = `/img/${kind}/${id}.webp`;
   const out = path.join(ROOT, "public", rel);
   // Si la API cambia la URL de origen, la imagen se regenera.
