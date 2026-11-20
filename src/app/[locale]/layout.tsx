@@ -4,6 +4,7 @@ import { I18nProvider } from "@/i18n/I18nProvider";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { HtmlLang } from "@/components/HtmlLang";
+import { StoreHydrator } from "@/components/StoreHydrator";
 
 export const dynamicParams = false;
 
@@ -23,6 +24,7 @@ export default async function LocaleLayout({
   return (
     <I18nProvider locale={locale}>
       <HtmlLang />
+      <StoreHydrator />
       <div className="mx-auto flex min-h-dvh w-full max-w-3xl flex-col px-4">
         <Header />
         <main className="flex-1 py-6">{children}</main>

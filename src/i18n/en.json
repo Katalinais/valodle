@@ -5,11 +5,153 @@
   "nav": {
     "home": "Home",
     "language": "Language",
-    "switchTo": "Español"
+    "switchTo": "Español",
+    "modes": "Game modes",
+    "stats": "Statistics",
+    "settings": "Settings"
   },
   "home": {
     "tagline": "Guess today's agent and skin",
-    "streak": "Streak"
+    "streak": "Streak",
+    "status": {
+      "new": "Not played",
+      "playing": "In progress",
+      "done": "Completed"
+    }
+  },
+  "modes": {
+    "classic": {
+      "title": "Classic",
+      "prompt": "Guess today's agent",
+      "desc": "Get clues on every try"
+    },
+    "ability": {
+      "title": "Ability",
+      "prompt": "Whose ability is this?",
+      "desc": "Guess from the icon"
+    },
+    "quote": {
+      "title": "Quote",
+      "prompt": "Which agent says this?",
+      "desc": "Guess from a voice line"
+    },
+    "emoji": {
+      "title": "Emoji",
+      "prompt": "Guess the agent from the emojis",
+      "desc": "One more emoji per miss"
+    },
+    "skin": { "title": "Skin", "prompt": "Which skin is this?", "desc": "Paid skins only" }
+  },
+  "daily": {
+    "challenge": "Challenge #{n}",
+    "preseason": "Pre-season",
+    "yesterday": "Yesterday's answer was"
+  },
+  "countdown": { "next": "Next challenge in" },
+  "guess": {
+    "submit": "Guess",
+    "agentPlaceholder": "Type an agent name…",
+    "skinPlaceholder": "Type a skin (e.g. Reaver Vandal)…",
+    "attempts": "Attempts: {n}"
+  },
+  "win": {
+    "title": "Correct!",
+    "answerWas": "The answer was",
+    "attempts": "You got it in {n} attempt(s)",
+    "nextMode": "Next: {mode}",
+    "allDone": "You finished every mode today! Back to home"
+  },
+  "share": {
+    "button": "Share",
+    "copied": "Copied!",
+    "error": "Couldn't copy",
+    "attempts": "Guessed in {n} attempt(s)",
+    "hard": "Hard mode 🏅",
+    "bonus": "Ability bonus ✅"
+  },
+  "classic": {
+    "columns": {
+      "agent": "Agent",
+      "gender": "Gender",
+      "role": "Role",
+      "species": "Species",
+      "origin": "Origin",
+      "affiliation": "Affiliation",
+      "ultPoints": "Ult",
+      "releaseYear": "Year"
+    },
+    "legend": {
+      "hit": "Correct",
+      "partial": "Partial",
+      "miss": "Wrong",
+      "higher": "Higher",
+      "lower": "Lower",
+      "unknown": "Data pending"
+    },
+    "unknown": "?"
+  },
+  "values": {
+    "gender": { "male": "Male", "female": "Female", "nonbinary": "Non-binary" },
+    "species": {
+      "human": "Human",
+      "radiant": "Radiant",
+      "radivoid": "Radivoid",
+      "robot": "Robot/AI",
+      "other": "Other"
+    },
+    "affiliation": {
+      "protocol": "VALORANT Protocol",
+      "kingdom": "Kingdom",
+      "alpha-omega": "Alpha Legion / Omega Earth",
+      "independent": "Independent"
+    },
+    "origin": { "unknown": "Unknown" }
+  },
+  "ability": {
+    "rotation": "Rotation",
+    "grayscale": "Grayscale",
+    "keyHint": "Hint: it's the {key} ability",
+    "keyHintIn": "Key hint in {n} attempt(s)",
+    "bonusTitle": "Bonus: what's the ability called?",
+    "bonusRight": "Nice! It's {name}.",
+    "bonusWrong": "Close! It was {name}."
+  },
+  "quote": {
+    "roleHint": "Hint: their role is {role}",
+    "roleHintIn": "Role hint in {n} attempt(s)",
+    "audioHint": "Hint: listen to the line",
+    "audioHintIn": "Audio hint in {n} attempt(s)",
+    "translated": "Unofficial translation"
+  },
+  "emoji": {
+    "revealIn": "Next emoji on your next miss",
+    "allRevealed": "All emojis revealed"
+  },
+  "skin": {
+    "weaponHint": "Hint: it's a {weapon}",
+    "weaponHintIn": "Weapon hint in {n} attempt(s)",
+    "tierHint": "Hint: {tier} tier",
+    "tierHintIn": "Tier hint in {n} attempt(s)",
+    "grayscale": "Hard mode (grayscale) 🏅",
+    "zoom": "Zoom {z}x",
+    "hardMedal": "You did it in hard mode! 🏅",
+    "alt": "Zoomed-in crop of the skin to guess"
+  },
+  "stats": {
+    "title": "Statistics",
+    "played": "Played",
+    "winRate": "Win %",
+    "streak": "Current streak",
+    "maxStreak": "Best streak",
+    "histogram": "Guesses per win",
+    "close": "Close",
+    "local": "Stats are stored only in this browser."
+  },
+  "settings": {
+    "title": "Settings",
+    "highContrast": "High contrast",
+    "reset": "Reset progress",
+    "resetConfirm": "Are you sure? All your games and streaks will be deleted."
   },
   "footer": {
     "disclaimer": "{site} isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games, and all associated properties are trademarks or registered trademarks of Riot Games, Inc.",

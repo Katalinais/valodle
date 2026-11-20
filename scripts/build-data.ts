@@ -33,6 +33,9 @@ import {
 } from "../src/data/schema";
 import { excludeReason, pickSkinImage, type ExcludeReason, type RawSkin } from "./lib/skins-filter";
 import { MASK_GRID, computePoi } from "./lib/poi";
+import { poolIds } from "../src/data/pools";
+import { config } from "../src/config";
+import { dateKeyIn, dayNumberToKey, keyToDayNumber } from "../src/lib/daily";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 const OUT = path.join(ROOT, "src/data/generated");
@@ -332,6 +335,42 @@ async function buildSkins(tiers: TierInfo[]) {
   return { skins, masks, stats, total };
 }
 
+/* ---------------- registro append-only del reto diario ---------------- */
+
+/**
+ * Añade los ids nuevos de cada pool con fecha de alta = mañana (zona del reto) o EPOCH si
+ * aún no se ha lanzado. Nunca borra ni modifica entradas: así las respuestas pasadas no cambian
+ * (ver src/lib/daily.ts).
+ */
+async function updateRegistries(pools: Record<string, string[]>) {
+  const dir = path.join(OUT, "registry");
+  await mkdir(dir, { recursive: true });
+  const tomorrow = dayNumberToKey(keyToDayNumber(dateKeyIn(new Date())) + 1);
+  const addedOn = tomorrow > config.epoch ? tomorrow : config.epoch;
+  const changes: string[] = [];
+  for (const [mode, ids] of Object.entries(pools)) {
+    const file = path.join(dir, `${mode}.json`);
+    const registry: Record<string, string> = existsSync(file)
+      ? JSON.parse(await readFile(file, "utf8"))
+      : {};
+    let added = 0;
+    for (const id of ids)
+      if (!registry[id]) {
+        registry[id] = addedOn;
+        added++;
+      }
+    const gone = Object.keys(registry).filter((id) => !ids.includes(id));
+    if (gone.length)
+      console.warn(`⚠ ${mode}: ids del registro que ya no están en los datos: ${gone.join(", ")}`);
+    const sorted = Object.fromEntries(
+      Object.entries(registry).sort(([a], [b]) => a.localeCompare(b)),
+    );
+    await writeFile(file, JSON.stringify(sorted, null, 2) + "\n");
+    changes.push(`${mode} +${added} (total ${Object.keys(sorted).length})`);
+  }
+  return changes;
+}
+
 /* ---------------- main ---------------- */
 
 async function main() {
@@ -358,6 +397,9 @@ async function main() {
   await writeJson("abilities.json", abilities);
   await writeJson("tiers.json", tiers);
   await writeJson("skins.json", skins);
+  const registryChanges = await updateRegistries(
+    poolIds({ agents, abilities, quotes, emojis, skins }),
+  );
   await writeFile(
     path.join(ROOT, "tests/fixtures/skin-masks.json"),
     JSON.stringify(z.array(SkinMaskSchema).parse(masks)) + "\n",
@@ -389,6 +431,7 @@ async function main() {
   console.log(
     `Por tier: ${TIERS.map((t) => `${t} ${skins.filter((s) => s.tier === t).length}`).join(" · ")}`,
   );
+  console.log(`Registro diario: ${registryChanges.join(" · ")}`);
   console.log("\nPENDIENTES (TODO):");
   console.log(`  · agents.manual.json (${todos.length}): ${todos.join(", ") || "ninguno"}`);
   console.log(`  · emojis.json: ${todoEmojis.join(", ") || "ninguno"}`);

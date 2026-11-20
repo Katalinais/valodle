@@ -5,11 +5,153 @@
   "nav": {
     "home": "Inicio",
     "language": "Idioma",
-    "switchTo": "English"
+    "switchTo": "English",
+    "modes": "Modos de juego",
+    "stats": "Estadísticas",
+    "settings": "Ajustes"
   },
   "home": {
     "tagline": "Adivina el agente y la skin del día",
-    "streak": "Racha"
+    "streak": "Racha",
+    "status": {
+      "new": "Sin jugar",
+      "playing": "En curso",
+      "done": "Completado"
+    }
+  },
+  "modes": {
+    "classic": {
+      "title": "Clásico",
+      "prompt": "Adivina el agente del día",
+      "desc": "Pistas en cada intento"
+    },
+    "ability": {
+      "title": "Habilidad",
+      "prompt": "¿De qué agente es esta habilidad?",
+      "desc": "Adivina por el icono"
+    },
+    "quote": {
+      "title": "Frase",
+      "prompt": "¿Qué agente dice esto?",
+      "desc": "Adivina por una línea de voz"
+    },
+    "emoji": {
+      "title": "Emoji",
+      "prompt": "Adivina el agente por los emojis",
+      "desc": "Un emoji más por fallo"
+    },
+    "skin": { "title": "Skin", "prompt": "¿Qué skin es esta?", "desc": "Solo skins de pago" }
+  },
+  "daily": {
+    "challenge": "Reto #{n}",
+    "preseason": "Pretemporada",
+    "yesterday": "La respuesta de ayer fue"
+  },
+  "countdown": { "next": "Siguiente reto en" },
+  "guess": {
+    "submit": "Adivinar",
+    "agentPlaceholder": "Escribe el nombre de un agente…",
+    "skinPlaceholder": "Escribe una skin (p. ej. Reaver Vandal)…",
+    "attempts": "Intentos: {n}"
+  },
+  "win": {
+    "title": "¡Correcto!",
+    "answerWas": "La respuesta era",
+    "attempts": "Lo adivinaste en {n} intento(s)",
+    "nextMode": "Siguiente: {mode}",
+    "allDone": "¡Completaste todos los modos de hoy! Volver al inicio"
+  },
+  "share": {
+    "button": "Compartir",
+    "copied": "¡Copiado!",
+    "error": "No se pudo copiar",
+    "attempts": "Adivinado en {n} intento(s)",
+    "hard": "Modo difícil 🏅",
+    "bonus": "Bonus de habilidad ✅"
+  },
+  "classic": {
+    "columns": {
+      "agent": "Agente",
+      "gender": "Género",
+      "role": "Rol",
+      "species": "Especie",
+      "origin": "Origen",
+      "affiliation": "Afiliación",
+      "ultPoints": "Ulti",
+      "releaseYear": "Año"
+    },
+    "legend": {
+      "hit": "Correcto",
+      "partial": "Parcial",
+      "miss": "Incorrecto",
+      "higher": "Mayor",
+      "lower": "Menor",
+      "unknown": "Dato pendiente"
+    },
+    "unknown": "?"
+  },
+  "values": {
+    "gender": { "male": "Masculino", "female": "Femenino", "nonbinary": "No binario" },
+    "species": {
+      "human": "Humano",
+      "radiant": "Radiante",
+      "radivoid": "Radivoid",
+      "robot": "Robot/IA",
+      "other": "Otro"
+    },
+    "affiliation": {
+      "protocol": "Protocolo VALORANT",
+      "kingdom": "Kingdom",
+      "alpha-omega": "Legión Alfa / Tierra Omega",
+      "independent": "Independiente"
+    },
+    "origin": { "unknown": "Desconocido" }
+  },
+  "ability": {
+    "rotation": "Rotación",
+    "grayscale": "Escala de grises",
+    "keyHint": "Pista: es la habilidad {key}",
+    "keyHintIn": "Pista de tecla en {n} intento(s)",
+    "bonusTitle": "Bonus: ¿cómo se llama la habilidad?",
+    "bonusRight": "¡Bien! Es {name}.",
+    "bonusWrong": "¡Casi! Era {name}."
+  },
+  "quote": {
+    "roleHint": "Pista: su rol es {role}",
+    "roleHintIn": "Pista de rol en {n} intento(s)",
+    "audioHint": "Pista: escucha la línea",
+    "audioHintIn": "Pista de audio en {n} intento(s)",
+    "translated": "Traducción no oficial"
+  },
+  "emoji": {
+    "revealIn": "Siguiente emoji en el próximo fallo",
+    "allRevealed": "Todos los emojis revelados"
+  },
+  "skin": {
+    "weaponHint": "Pista: es un arma de tipo {weapon}",
+    "weaponHintIn": "Pista de arma en {n} intento(s)",
+    "tierHint": "Pista: tier {tier}",
+    "tierHintIn": "Pista de tier en {n} intento(s)",
+    "grayscale": "Modo difícil (gris) 🏅",
+    "zoom": "Zoom {z}x",
+    "hardMedal": "¡Lo lograste en modo difícil! 🏅",
+    "alt": "Fragmento ampliado de la skin a adivinar"
+  },
+  "stats": {
+    "title": "Estadísticas",
+    "played": "Jugadas",
+    "winRate": "% victorias",
+    "streak": "Racha actual",
+    "maxStreak": "Mejor racha",
+    "histogram": "Intentos por victoria",
+    "close": "Cerrar",
+    "local": "Las estadísticas se guardan solo en este navegador."
+  },
+  "settings": {
+    "title": "Ajustes",
+    "highContrast": "Alto contraste",
+    "reset": "Borrar progreso",
+    "resetConfirm": "¿Seguro? Se borrarán todas tus partidas y rachas."
   },
   "footer": {
     "disclaimer": "{site} no está respaldado por Riot Games y no refleja las opiniones de Riot Games ni de nadie oficialmente involucrado en la producción o gestión de las propiedades de Riot Games. Riot Games y todas las propiedades asociadas son marcas comerciales o registradas de Riot Games, Inc.",
