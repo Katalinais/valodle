@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo } from "react";
+import { motion } from "framer-motion";
 import { config } from "@/config";
 import { agentById, agents, emojis } from "@/data";
 import registry from "@/data/generated/registry/emoji.json";
@@ -54,9 +55,23 @@ export function EmojiGame() {
                 <li
                   key={i}
                   data-revealed={i < revealed}
-                  className="grid h-14 w-14 place-items-center rounded-lg border-2 border-val-ink-3 bg-val-ink-2 text-3xl"
+                  className={`grid h-14 w-14 place-items-center rounded-xl border text-3xl transition-all duration-500 sm:h-16 sm:w-16 sm:text-4xl ${
+                    i < revealed
+                      ? "border-val-red/40 bg-gradient-to-b from-val-ink-3 to-val-ink-2 shadow-[0_6px_18px_-8px_rgb(255_70_85/0.6)]"
+                      : "border-dashed border-white/15 bg-black/20"
+                  }`}
                 >
-                  {i < revealed ? e : <span className="text-val-muted">?</span>}
+                  {i < revealed ? (
+                    <motion.span
+                      initial={{ scale: 0, rotate: -30 }}
+                      animate={{ scale: 1, rotate: 0 }}
+                      transition={{ type: "spring", stiffness: 400, damping: 14 }}
+                    >
+                      {e}
+                    </motion.span>
+                  ) : (
+                    <span className="font-display text-2xl text-white/20">?</span>
+                  )}
                 </li>
               ))}
             </ul>
@@ -71,6 +86,7 @@ export function EmojiGame() {
               options={options}
               excludeIds={game.guesses}
               onGuess={(id) => submit(id)}
+              shakeKey={misses}
               placeholder={t("guess.agentPlaceholder")}
             />
           )}

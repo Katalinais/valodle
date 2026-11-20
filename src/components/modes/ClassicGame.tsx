@@ -53,6 +53,7 @@ export function ClassicGame() {
               options={options}
               excludeIds={game.guesses}
               onGuess={(id) => submit(id)}
+              shakeKey={game.guesses.length}
               placeholder={t("guess.agentPlaceholder")}
             />
           )}

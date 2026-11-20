@@ -14,7 +14,7 @@ export function LanguageSwitch() {
       href={target}
       hrefLang={other}
       aria-label={`${t("nav.language")}: ${t("nav.switchTo")}`}
-      className="rounded border border-val-ink-3 px-2 py-1 text-sm font-semibold uppercase hover:border-val-red"
+      className="grid h-10 min-w-10 place-items-center rounded-lg border border-white/10 bg-white/5 px-2 text-xs font-bold uppercase tracking-widest text-val-muted transition hover:border-val-red/60 hover:text-val-cream"
     >
       {other}
     </Link>

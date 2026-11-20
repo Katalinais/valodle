@@ -5,14 +5,16 @@ import { useI18n } from "@/i18n/I18nProvider";
 import type { Agent } from "@/data/schema";
 import { CLASSIC_COLUMNS, compareAgents, type Cell } from "@/lib/compare";
 import { formatAgentValue } from "@/lib/agentFormat";
+import { SafeImg } from "./SafeImg";
 
 const FLIP_MS = 300;
 
 const STATUS_CLASS: Record<Cell["status"], string> = {
-  hit: "bg-hit border-hit",
-  partial: "bg-partial border-partial",
-  miss: "bg-miss border-miss",
-  unknown: "bg-val-ink-3 border-val-ink-3",
+  hit: "bg-gradient-to-b from-[#4cbf5c] to-hit border-[#6fd27d]/60 shadow-[0_4px_14px_-6px_rgb(63_163_77/0.9)]",
+  partial:
+    "bg-gradient-to-b from-[#f2a03a] to-partial border-[#f7bd6e]/60 shadow-[0_4px_14px_-6px_rgb(224_138_30/0.9)]",
+  miss: "bg-gradient-to-b from-[#d94452] to-miss border-[#e66f7a]/50",
+  unknown: "bg-val-ink-3 border-white/10",
 };
 
 /** Icono no cromático para personas daltónicas. */
@@ -54,7 +56,7 @@ function CellBox({
       animate={{ rotateY: 0, opacity: 1 }}
       transition={{ duration: FLIP_MS / 1000, delay }}
       data-status={cell.status}
-      className={`relative flex h-16 w-16 shrink-0 flex-col items-center justify-center overflow-hidden rounded border-2 p-1 text-center text-[11px] font-semibold leading-tight text-white [text-shadow:0_1px_2px_rgb(0_0_0/0.6)] ${STATUS_CLASS[cell.status]}`}
+      className={`relative flex h-16 w-16 shrink-0 flex-col items-center justify-center overflow-hidden rounded-lg border p-1 text-center text-[11px] font-semibold leading-tight text-white [text-shadow:0_1px_2px_rgb(0_0_0/0.6)] ${STATUS_CLASS[cell.status]}`}
     >
       {cell.arrow && (
         <span
@@ -96,7 +98,7 @@ export function ClassicGrid({ guesses, answer, animateFrom }: Props) {
             <div
               key={c}
               role="columnheader"
-              className="w-16 shrink-0 border-b-2 border-val-cream/30 pb-1 text-center text-[11px] font-semibold uppercase text-val-muted"
+              className="w-16 shrink-0 border-b-2 border-val-red/40 pb-1 text-center text-[10px] font-bold uppercase tracking-wider text-val-muted"
             >
               {t(`classic.columns.${c}`)}
             </div>
@@ -113,11 +115,11 @@ export function ClassicGrid({ guesses, answer, animateFrom }: Props) {
                 delay={0}
                 animate={animate}
                 image={
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img
+                  <SafeImg
                     src={g.icon}
                     alt={g.name[locale]}
-                    className="absolute inset-0 h-full w-full object-cover"
+                    fallback={g.name[locale]}
+                    className="absolute inset-0 h-full w-full object-cover text-xl"
                   />
                 }
               >

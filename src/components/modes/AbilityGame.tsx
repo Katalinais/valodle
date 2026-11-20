@@ -14,6 +14,7 @@ import { useGameStore } from "@/store/gameStore";
 import { AgentGuessList } from "../AgentGuessList";
 import { GuessInput } from "../GuessInput";
 import { HintBox } from "../HintBox";
+import { SafeImg } from "../SafeImg";
 import { ModeShell, challengeLabel } from "../ModeShell";
 import { Toggle } from "../Toggle";
 import { WinPanel } from "../WinPanel";
@@ -76,13 +77,13 @@ export function AbilityGame() {
       {ability && agent && (
         <>
           <div className="flex flex-col items-center gap-3">
-            <div className="grid h-40 w-40 place-items-center overflow-hidden rounded-lg border-2 border-val-ink-3 bg-val-ink-2">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
+            <div className="panel corners grid h-48 w-48 place-items-center overflow-hidden bg-[radial-gradient(circle,_rgb(255_70_85/0.18),_transparent_65%)]">
+              <SafeImg
                 src={ability.icon}
                 alt={t("modes.ability.prompt")}
-                data-testid="ability-icon"
-                className="h-28 w-28 object-contain transition-[transform,filter] duration-700"
+                fallback="?"
+                testId="ability-icon"
+                className="h-28 w-28 rounded-xl object-contain text-5xl drop-shadow-[0_0_14px_rgb(255_255_255/0.25)] transition-[transform,filter] duration-700"
                 style={{
                   transform: `rotate(${style.rotation}deg)`,
                   filter: `grayscale(${style.gray})`,
@@ -110,6 +111,8 @@ export function AbilityGame() {
               <HintBox
                 testId="hint-key"
                 unlocked={misses >= KEY_HINT_AT}
+                progress={misses}
+                total={KEY_HINT_AT}
                 lockedText={t("ability.keyHintIn", { n: KEY_HINT_AT - misses })}
               >
                 {t("ability.keyHint", { key: ability.key })}
@@ -118,6 +121,7 @@ export function AbilityGame() {
                 options={options}
                 excludeIds={game.guesses}
                 onGuess={(id) => submit(id)}
+                shakeKey={misses}
                 placeholder={t("guess.agentPlaceholder")}
               />
             </>

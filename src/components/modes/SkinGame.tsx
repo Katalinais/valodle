@@ -13,6 +13,8 @@ import { zoomForMisses } from "@/lib/zoom";
 import { useGameStore } from "@/store/gameStore";
 import { GuessInput } from "../GuessInput";
 import { HintBox } from "../HintBox";
+import { CheckIcon, CrossIcon } from "../icons";
+import { SafeImg } from "../SafeImg";
 import { ModeShell, challengeLabel } from "../ModeShell";
 import { Toggle } from "../Toggle";
 import { WinPanel } from "../WinPanel";
@@ -98,6 +100,8 @@ export function SkinGame() {
                 <HintBox
                   testId="hint-weapon"
                   unlocked={misses >= WEAPON_HINT_AT}
+                  progress={misses}
+                  total={WEAPON_HINT_AT}
                   lockedText={t("skin.weaponHintIn", { n: WEAPON_HINT_AT - misses })}
                 >
                   {t("skin.weaponHint", { weapon: skin.weaponName[locale] })}
@@ -105,12 +109,18 @@ export function SkinGame() {
                 <HintBox
                   testId="hint-tier"
                   unlocked={misses >= TIER_HINT_AT}
+                  progress={misses}
+                  total={TIER_HINT_AT}
                   lockedText={t("skin.tierHintIn", { n: TIER_HINT_AT - misses })}
                 >
                   <span className="inline-flex items-center gap-1">
                     {tier && (
-                      // eslint-disable-next-line @next/next/no-img-element
-                      <img src={tier.icon} alt="" className="h-5 w-5" />
+                      <SafeImg
+                        src={tier.icon}
+                        alt=""
+                        fallback={tier.name}
+                        className="h-5 w-5 rounded text-[9px]"
+                      />
                     )}
                     {t("skin.tierHint", { tier: skin.tier })}
                   </span>
@@ -120,6 +130,7 @@ export function SkinGame() {
                 options={options}
                 excludeIds={game.guesses}
                 onGuess={(id) => submit(id, { hard: grayscale })}
+                shakeKey={misses}
                 placeholder={t("guess.skinPlaceholder")}
               />
             </>
@@ -145,20 +156,31 @@ export function SkinGame() {
               return (
                 <motion.li
                   key={id}
-                  initial={{ opacity: 0, y: -8 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  layout
+                  initial={{ opacity: 0, x: ok ? 0 : -16, scale: ok ? 0.9 : 1 }}
+                  animate={{ opacity: 1, x: 0, scale: 1 }}
+                  transition={{ type: "spring", stiffness: 380, damping: 26 }}
                   data-status={ok ? "hit" : "miss"}
-                  className={`flex items-center gap-3 rounded border-2 px-2 py-1.5 font-semibold text-white ${
-                    ok ? "border-hit bg-hit" : "border-miss bg-miss"
+                  className={`flex items-center gap-3 rounded-xl border p-1.5 pr-3 font-semibold ${
+                    ok
+                      ? "border-hit/60 bg-gradient-to-r from-hit/35 to-hit/10 text-white"
+                      : "border-miss/40 bg-gradient-to-r from-miss/25 to-transparent text-val-cream"
                   }`}
                 >
                   {s && (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img src={s.thumb ?? s.image} alt="" className="h-8 w-20 object-contain" />
+                    <SafeImg
+                      src={s.thumb ?? s.image}
+                      alt=""
+                      fallback={s.weapon}
+                      className="h-10 w-24 shrink-0 rounded-lg bg-black/20 object-contain px-1 text-sm"
+                    />
                   )}
                   <span className="flex-1 truncate">{s?.name[locale] ?? id}</span>
-                  <span aria-label={t(ok ? "classic.legend.hit" : "classic.legend.miss")}>
-                    {ok ? "✓" : "✗"}
+                  <span
+                    className={`grid h-7 w-7 shrink-0 place-items-center rounded-full ${ok ? "bg-hit" : "bg-miss/80"} text-white`}
+                    aria-label={t(ok ? "classic.legend.hit" : "classic.legend.miss")}
+                  >
+                    {ok ? <CheckIcon className="h-4 w-4" /> : <CrossIcon className="h-3.5 w-3.5" />}
                   </span>
                 </motion.li>
               );

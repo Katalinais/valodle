@@ -17,7 +17,10 @@
       "new": "Sin jugar",
       "playing": "En curso",
       "done": "Completado"
-    }
+    },
+    "today": "Reto de hoy",
+    "progress": "{done} de {total} completados",
+    "play": "Jugar"
   },
   "modes": {
     "classic": {
@@ -40,26 +43,35 @@
       "prompt": "Adivina el agente por los emojis",
       "desc": "Un emoji más por fallo"
     },
-    "skin": { "title": "Skin", "prompt": "¿Qué skin es esta?", "desc": "Solo skins de pago" }
+    "skin": {
+      "title": "Skin",
+      "prompt": "¿Qué skin es esta?",
+      "desc": "Solo skins de pago"
+    },
+    "label": "Modo {n} de {total}"
   },
   "daily": {
     "challenge": "Reto #{n}",
     "preseason": "Pretemporada",
     "yesterday": "La respuesta de ayer fue"
   },
-  "countdown": { "next": "Siguiente reto en" },
+  "countdown": {
+    "next": "Siguiente reto en"
+  },
   "guess": {
     "submit": "Adivinar",
-    "agentPlaceholder": "Escribe el nombre de un agente…",
+    "agentPlaceholder": "Nombre del agente…",
     "skinPlaceholder": "Nombre de la skin…",
-    "attempts": "Intentos: {n}"
+    "attempts": "Intentos: {n}",
+    "empty": "Escribe un nombre para empezar"
   },
   "win": {
     "title": "¡Correcto!",
     "answerWas": "La respuesta era",
     "attempts": "Lo adivinaste en {n} intento(s)",
     "nextMode": "Siguiente: {mode}",
-    "allDone": "¡Completaste todos los modos de hoy! Volver al inicio"
+    "allDone": "¡Completaste todos los modos de hoy! Volver al inicio",
+    "next": "Siguiente modo"
   },
   "share": {
     "button": "Compartir",
@@ -91,7 +103,11 @@
     "unknown": "?"
   },
   "values": {
-    "gender": { "male": "Masculino", "female": "Femenino", "nonbinary": "No binario" },
+    "gender": {
+      "male": "Masculino",
+      "female": "Femenino",
+      "nonbinary": "No binario"
+    },
     "species": {
       "human": "Humano",
       "radiant": "Radiante",
@@ -105,7 +121,9 @@
       "alpha-omega": "Legión Alfa / Tierra Omega",
       "independent": "Independiente"
     },
-    "origin": { "unknown": "Desconocido" }
+    "origin": {
+      "unknown": "Desconocido"
+    }
   },
   "ability": {
     "rotation": "Rotación",

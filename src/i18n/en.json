@@ -17,7 +17,10 @@
       "new": "Not played",
       "playing": "In progress",
       "done": "Completed"
-    }
+    },
+    "today": "Today's challenge",
+    "progress": "{done} of {total} completed",
+    "play": "Play"
   },
   "modes": {
     "classic": {
@@ -40,26 +43,35 @@
       "prompt": "Guess the agent from the emojis",
       "desc": "One more emoji per miss"
     },
-    "skin": { "title": "Skin", "prompt": "Which skin is this?", "desc": "Paid skins only" }
+    "skin": {
+      "title": "Skin",
+      "prompt": "Which skin is this?",
+      "desc": "Paid skins only"
+    },
+    "label": "Mode {n} of {total}"
   },
   "daily": {
     "challenge": "Challenge #{n}",
     "preseason": "Pre-season",
     "yesterday": "Yesterday's answer was"
   },
-  "countdown": { "next": "Next challenge in" },
+  "countdown": {
+    "next": "Next challenge in"
+  },
   "guess": {
     "submit": "Guess",
-    "agentPlaceholder": "Type an agent name…",
+    "agentPlaceholder": "Agent name…",
     "skinPlaceholder": "Skin name…",
-    "attempts": "Attempts: {n}"
+    "attempts": "Attempts: {n}",
+    "empty": "Type a name to start"
   },
   "win": {
     "title": "Correct!",
     "answerWas": "The answer was",
     "attempts": "You got it in {n} attempt(s)",
     "nextMode": "Next: {mode}",
-    "allDone": "You finished every mode today! Back to home"
+    "allDone": "You finished every mode today! Back to home",
+    "next": "Next mode"
   },
   "share": {
     "button": "Share",
@@ -91,7 +103,11 @@
     "unknown": "?"
   },
   "values": {
-    "gender": { "male": "Male", "female": "Female", "nonbinary": "Non-binary" },
+    "gender": {
+      "male": "Male",
+      "female": "Female",
+      "nonbinary": "Non-binary"
+    },
     "species": {
       "human": "Human",
       "radiant": "Radiant",
@@ -105,7 +121,9 @@
       "alpha-omega": "Alpha Legion / Omega Earth",
       "independent": "Independent"
     },
-    "origin": { "unknown": "Unknown" }
+    "origin": {
+      "unknown": "Unknown"
+    }
   },
   "ability": {
     "rotation": "Rotation",

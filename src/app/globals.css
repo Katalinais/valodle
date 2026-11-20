@@ -30,18 +30,138 @@ html[data-contrast="high"] {
 }
 
 body {
-  background: var(--color-val-ink);
+  background-color: var(--color-val-ink);
   color: var(--color-val-cream);
   font-family: var(--font-sans);
 }
 
-/* Fondo con un patrón diagonal sutil */
+/* Fondo: brillo rojo arriba, viñeta y rayas diagonales muy sutiles */
 .bg-stripes {
-  background-image: repeating-linear-gradient(
-    135deg,
-    rgb(255 255 255 / 0.015) 0 2px,
-    transparent 2px 14px
+  background-image:
+    radial-gradient(ellipse 70% 40% at 50% -5%, rgb(255 70 85 / 0.18), transparent 70%),
+    radial-gradient(ellipse 50% 30% at 100% 100%, rgb(255 70 85 / 0.06), transparent 70%),
+    repeating-linear-gradient(135deg, rgb(255 255 255 / 0.018) 0 2px, transparent 2px 14px);
+  background-attachment: fixed;
+}
+
+/* Panel con borde degradado y "esquinas de mira" rojas (estilo HUD) */
+.panel {
+  position: relative;
+  border: 1px solid transparent;
+  border-radius: 0.75rem;
+  background:
+    linear-gradient(180deg, rgb(27 39 51 / 0.92), rgb(20 30 40 / 0.92)) padding-box,
+    linear-gradient(
+        140deg,
+        rgb(255 70 85 / 0.55),
+        rgb(255 255 255 / 0.06) 35%,
+        rgb(255 255 255 / 0.04) 70%,
+        rgb(255 70 85 / 0.3)
+      )
+      border-box;
+  box-shadow: 0 10px 30px -12px rgb(0 0 0 / 0.6);
+}
+.corners::before,
+.corners::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-color: var(--color-val-red);
+  pointer-events: none;
+}
+.corners::before {
+  top: -1px;
+  left: -1px;
+  border-top: 2px solid var(--color-val-red);
+  border-left: 2px solid var(--color-val-red);
+  border-top-left-radius: 0.75rem;
+}
+.corners::after {
+  bottom: -1px;
+  right: -1px;
+  border-bottom: 2px solid var(--color-val-red);
+  border-right: 2px solid var(--color-val-red);
+  border-bottom-right-radius: 0.75rem;
+}
+
+/* Etiqueta pequeña con barra roja: "// MODO" */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-val-muted);
+}
+.tag::before {
+  content: "";
+  width: 0.9rem;
+  height: 2px;
+  background: var(--color-val-red);
+}
+
+/* Botón principal con brillo al pasar */
+.btn-primary {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(180deg, #ff5a68, var(--color-val-red));
+  box-shadow: 0 6px 20px -6px rgb(255 70 85 / 0.7);
+}
+.btn-primary::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    110deg,
+    transparent 30%,
+    rgb(255 255 255 / 0.35) 50%,
+    transparent 70%
   );
+  transform: translateX(-120%);
+  transition: transform 0.6s ease;
+}
+.btn-primary:hover::after {
+  transform: translateX(120%);
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translateX(-2px);
+  }
+  20%,
+  80% {
+    transform: translateX(4px);
+  }
+  30%,
+  50%,
+  70% {
+    transform: translateX(-7px);
+  }
+  40%,
+  60% {
+    transform: translateX(7px);
+  }
+}
+.animate-shake {
+  animation: shake 0.45s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+@keyframes float-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.animate-float-in {
+  animation: float-in 0.5s ease both;
 }
 
 :focus-visible {

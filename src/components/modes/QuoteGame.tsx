@@ -53,13 +53,19 @@ export function QuoteGame() {
     >
       {quote && agent && (
         <>
-          <figure className="rounded-lg border-2 border-val-ink-3 bg-val-ink-2 p-5 text-center">
+          <figure className="panel corners relative mt-4 px-6 pb-6 pt-9 text-center">
+            <span
+              aria-hidden
+              className="absolute left-1/2 top-0 grid h-10 w-10 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full bg-val-red font-display text-4xl leading-none text-white shadow-[0_0_18px_-2px_rgb(255_70_85/0.8)]"
+            >
+              “
+            </span>
             <blockquote
-              className="font-display text-3xl leading-tight tracking-wide"
+              className="font-display text-4xl leading-tight tracking-wide"
               data-testid="quote-text"
               lang={quote.text[locale] ? locale : "en"}
             >
-              “{quote.text[locale] ?? quote.text.en}”
+              {quote.text[locale] ?? quote.text.en}
             </blockquote>
           </figure>
           {!game.won && (
@@ -68,6 +74,8 @@ export function QuoteGame() {
                 <HintBox
                   testId="hint-role"
                   unlocked={misses >= ROLE_HINT_AT}
+                  progress={misses}
+                  total={ROLE_HINT_AT}
                   lockedText={t("quote.roleHintIn", { n: ROLE_HINT_AT - misses })}
                 >
                   {t("quote.roleHint", { role: agent.role.name[locale] })}
@@ -76,6 +84,8 @@ export function QuoteGame() {
                   <HintBox
                     testId="hint-audio"
                     unlocked={misses >= AUDIO_HINT_AT}
+                    progress={misses}
+                    total={AUDIO_HINT_AT}
                     lockedText={t("quote.audioHintIn", { n: AUDIO_HINT_AT - misses })}
                   >
                     <span className="mb-1 block">{t("quote.audioHint")}</span>
@@ -92,6 +102,7 @@ export function QuoteGame() {
                 options={options}
                 excludeIds={game.guesses}
                 onGuess={(id) => submit(id)}
+                shakeKey={misses}
                 placeholder={t("guess.agentPlaceholder")}
               />
             </>

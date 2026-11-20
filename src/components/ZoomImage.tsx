@@ -17,7 +17,7 @@ export function ZoomImage({ src, alt, aspect, poi, zoom, grayscale, testId }: Pr
   const l = zoomLayout(poi, zoom, aspect);
   return (
     <div
-      className="relative w-full overflow-hidden rounded-lg border-2 border-val-ink-3 bg-[radial-gradient(circle,_#2a3948_0%,_#0f1923_80%)]"
+      className="panel corners relative w-full overflow-hidden bg-[radial-gradient(circle,_#2a3948_0%,_#0f1923_80%)]"
       style={{ aspectRatio: String(CONTAINER_ASPECT) }}
       data-testid={testId}
       data-zoom={zoom}
@@ -35,6 +35,14 @@ export function ZoomImage({ src, alt, aspect, poi, zoom, grayscale, testId }: Pr
           top: `${l.top * 100}%`,
           filter: grayscale ? "grayscale(1)" : undefined,
         }}
+      />
+      {/* Retícula decorativa */}
+      <div aria-hidden className="pointer-events-none absolute inset-0 grid place-items-center">
+        <span className="h-10 w-10 rounded-full border border-white/20" />
+      </div>
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgb(255_255_255/0.03)_1px,transparent_1px),linear-gradient(90deg,rgb(255_255_255/0.03)_1px,transparent_1px)] bg-[size:24px_24px]"
       />
     </div>
   );
