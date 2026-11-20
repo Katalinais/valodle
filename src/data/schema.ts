@@ -94,6 +94,8 @@ export const SkinSchema = z.object({
   weaponCategory: z.string(),
   tier: z.enum(TIERS),
   image: ImageSrcSchema,
+  /** Miniatura (~192 px) para listas; la añade `npm run images`. */
+  thumb: ImageSrcSchema.optional(),
   isMelee: z.boolean(),
   /** Relación de aspecto (ancho/alto) de la imagen. */
   aspect: z.number().positive(),

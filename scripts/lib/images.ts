@@ -41,27 +41,43 @@ export async function loadImage(url: string): Promise<Buffer> {
   }
 }
 
-export type ImageKind = "agents" | "roles" | "abilities" | "tiers" | "skins";
+export type ImageKind = "agents" | "roles" | "abilities" | "tiers" | "skins" | "thumbs";
 
-/** Tamaño máximo (lado mayor) por tipo; las skins conservan su resolución para el zoom. */
-const MAX_SIZE: Record<ImageKind, number | null> = {
-  agents: 256,
-  roles: 64,
-  abilities: 128,
-  tiers: 64,
-  skins: null,
+type Processing = { max: number | null; quality: number; alphaQuality?: number; version: number };
+
+/**
+ * Procesado por tipo (lado mayor máximo y calidad WebP). Al cambiar un ajuste, sube `version`
+ * y `npm run images` regenera esas imágenes desde la caché local sin volver a descargarlas.
+ */
+const PROCESSING: Record<ImageKind, Processing> = {
+  agents: { max: 256, quality: 90, version: 1 },
+  roles: { max: 64, quality: 90, version: 1 },
+  abilities: { max: 128, quality: 90, version: 1 },
+  tiers: { max: 64, quality: 90, version: 1 },
+  // 2048 px sobra para el zoom 4x; algunas imágenes de la API miden 8192 px de ancho.
+  skins: { max: 2048, quality: 82, version: 2 },
+  // Miniaturas para el autocompletado y la lista de intentos (se muestran a ~80 px de ancho).
+  thumbs: { max: 192, quality: 70, alphaQuality: 80, version: 2 },
 };
 
 const isRemote = (src: string) => src.startsWith("https://");
 
 export type LocalizeReport = { localized: number; reused: number; failed: string[] };
 
-/** Ruta local → URL de origen. Se commitea para saber si una imagen está al día sin red. */
-export type ImageManifest = Record<string, string>;
+/** Ruta local → origen y versión de procesado. Se commitea: permite saber si está al día sin red. */
+export type ImageManifest = Record<string, { src: string; v: number }>;
 export const MANIFEST_FILE = path.join(ROOT, "src/data/generated/images.json");
 
 export async function readManifest(): Promise<ImageManifest> {
-  return existsSync(MANIFEST_FILE) ? JSON.parse(await readFile(MANIFEST_FILE, "utf8")) : {};
+  if (!existsSync(MANIFEST_FILE)) return {};
+  const raw = JSON.parse(await readFile(MANIFEST_FILE, "utf8")) as Record<
+    string,
+    string | { src: string; v: number }
+  >;
+  // Formato antiguo: rel → src (versión 1).
+  return Object.fromEntries(
+    Object.entries(raw).map(([k, v]) => [k, typeof v === "string" ? { src: v, v: 1 } : v]),
+  );
 }
 
 export async function writeManifest(manifest: ImageManifest) {
@@ -72,8 +88,9 @@ export async function writeManifest(manifest: ImageManifest) {
 }
 
 /**
- * Convierte `src` en una ruta local `/img/<kind>/<id>.webp`. Si ya es local, la deja igual.
- * Si no se puede obtener la imagen, conserva la URL remota (respaldo) y lo anota en `report`.
+ * Devuelve la ruta local `/img/<kind>/<id>.webp` de la imagen, generándola si falta o si cambió
+ * el origen o el procesado. `src` puede ser la URL remota o una ruta local ya generada (se busca
+ * su origen en el manifiesto). Si no se puede obtener, devuelve `src` y lo anota en `report`.
  */
 export async function localize(
   src: string,
@@ -82,25 +99,26 @@ export async function localize(
   report: LocalizeReport,
   manifest: ImageManifest,
 ): Promise<string> {
-  if (!isRemote(src)) {
+  const origin = isRemote(src) ? src : manifest[src]?.src;
+  if (!origin) {
     report.reused++;
     return src;
   }
   const rel = `/img/${kind}/${id}.webp`;
   const out = path.join(ROOT, "public", rel);
-  // Si la API cambia la URL de origen, la imagen se regenera.
-  if (existsSync(out) && manifest[rel] === src) {
+  const { max, quality, alphaQuality = 100, version } = PROCESSING[kind];
+  const entry = manifest[rel];
+  if (existsSync(out) && entry?.src === origin && entry.v === version) {
     report.reused++;
     return rel;
   }
   try {
-    const buf = await loadImage(src);
+    const buf = await loadImage(origin);
     await mkdir(path.dirname(out), { recursive: true });
     let img = sharp(buf);
-    const max = MAX_SIZE[kind];
     if (max) img = img.resize(max, max, { fit: "inside", withoutEnlargement: true });
-    await img.webp({ quality: kind === "skins" ? 82 : 90, alphaQuality: 100 }).toFile(out);
-    manifest[rel] = src;
+    await img.webp({ quality, alphaQuality, effort: 4 }).toFile(out);
+    manifest[rel] = { src: origin, v: version };
     report.localized++;
     return rel;
   } catch (err) {

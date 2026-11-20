@@ -37,7 +37,7 @@ export function SkinGame() {
           label: s.name[locale],
           keywords: [s.name.en, s.name.es],
           sublabel: `${s.weaponName[locale]} · ${s.tier}`,
-          image: s.image,
+          image: s.thumb ?? s.image,
           imageShape: "wide" as const,
         }))
         .sort((a, b) => a.label.localeCompare(b.label)),
@@ -154,7 +154,7 @@ export function SkinGame() {
                 >
                   {s && (
                     // eslint-disable-next-line @next/next/no-img-element
-                    <img src={s.image} alt="" className="h-8 w-20 object-contain" />
+                    <img src={s.thumb ?? s.image} alt="" className="h-8 w-20 object-contain" />
                   )}
                   <span className="flex-1 truncate">{s?.name[locale] ?? id}</span>
                   <span aria-label={t(ok ? "classic.legend.hit" : "classic.legend.miss")}>

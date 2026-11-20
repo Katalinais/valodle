@@ -65,6 +65,13 @@ export async function localizeGenerated() {
       get: () => s.image,
       set: (v: string) => (s.image = v),
     })),
+    // Miniatura: se genera desde el mismo origen que la imagen grande.
+    ...skins.map((s) => ({
+      kind: "thumbs" as const,
+      id: s.id,
+      get: () => s.thumb ?? s.image,
+      set: (v: string) => (s.thumb = v),
+    })),
   ];
 
   // Los roles se repiten entre agentes: procesar cada URL una sola vez.
