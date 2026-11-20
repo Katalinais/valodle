@@ -1,0 +1,272 @@
+{
+  "astra": {
+    "gender": "female",
+    "species": "radiant",
+    "origin": ["GH"],
+    "releaseYear": 2021,
+    "releaseEpisode": "E2A2",
+    "ultPoints": "TODO",
+    "affiliation": "protocol"
+  },
+  "breach": {
+    "gender": "male",
+    "species": "radiant",
+    "origin": ["SE"],
+    "releaseYear": 2020,
+    "releaseEpisode": "Beta",
+    "ultPoints": "TODO",
+    "affiliation": "protocol"
+  },
+  "brimstone": {
+    "gender": "male",
+    "species": "human",
+    "origin": ["US"],
+    "releaseYear": 2020,
+    "releaseEpisode": "Beta",
+    "ultPoints": "TODO",
+    "affiliation": "protocol"
+  },
+  "chamber": {
+    "gender": "male",
+    "species": "human",
+    "origin": ["FR"],
+    "releaseYear": 2021,
+    "releaseEpisode": "E3A3",
+    "ultPoints": "TODO",
+    "affiliation": "protocol"
+  },
+  "clove": {
+    "gender": "nonbinary",
+    "species": "TODO",
+    "origin": ["GB"],
+    "releaseYear": 2024,
+    "releaseEpisode": "E8A2",
+    "ultPoints": "TODO",
+    "affiliation": "protocol"
+  },
+  "cypher": {
+    "gender": "male",
+    "species": "human",
+    "origin": ["MA"],
+    "releaseYear": 2020,
+    "releaseEpisode": "Beta",
+    "ultPoints": "TODO",
+    "affiliation": "protocol"
+  },
+  "deadlock": {
+    "gender": "female",
+    "species": "human",
+    "origin": ["NO"],
+    "releaseYear": 2023,
+    "releaseEpisode": "E7A1",
+    "ultPoints": "TODO",
+    "affiliation": "protocol"
+  },
+  "fade": {
+    "gender": "female",
+    "species": "radiant",
+    "origin": ["TR"],
+    "releaseYear": 2022,
+    "releaseEpisode": "E4A2",
+    "ultPoints": "TODO",
+    "affiliation": "protocol"
+  },
+  "gekko": {
+    "gender": "male",
+    "species": "radiant",
+    "origin": ["US"],
+    "releaseYear": 2023,
+    "releaseEpisode": "E6A2",
+    "ultPoints": "TODO",
+    "affiliation": "protocol"
+  },
+  "harbor": {
+    "gender": "male",
+    "species": "radiant",
+    "origin": ["IN"],
+    "releaseYear": 2022,
+    "releaseEpisode": "E5A3",
+    "ultPoints": "TODO",
+    "affiliation": "protocol"
+  },
+  "hush": {
+    "gender": "TODO",
+    "species": "TODO",
+    "origin": "TODO",
+    "releaseYear": "TODO",
+    "releaseEpisode": "TODO",
+    "ultPoints": "TODO",
+    "affiliation": "TODO"
+  },
+  "iso": {
+    "gender": "male",
+    "species": "radiant",
+    "origin": ["CN"],
+    "releaseYear": 2023,
+    "releaseEpisode": "E7A3",
+    "ultPoints": "TODO",
+    "affiliation": "protocol"
+  },
+  "jett": {
+    "gender": "female",
+    "species": "radiant",
+    "origin": ["KR"],
+    "releaseYear": 2020,
+    "releaseEpisode": "Beta",
+    "ultPoints": "TODO",
+    "affiliation": "protocol"
+  },
+  "kayo": {
+    "gender": "male",
+    "species": "robot",
+    "origin": "TODO",
+    "releaseYear": 2021,
+    "releaseEpisode": "E2A3",
+    "ultPoints": "TODO",
+    "affiliation": "alpha-omega"
+  },
+  "killjoy": {
+    "gender": "female",
+    "species": "human",
+    "origin": ["DE"],
+    "releaseYear": 2020,
+    "releaseEpisode": "E1A2",
+    "ultPoints": "TODO",
+    "affiliation": "protocol"
+  },
+  "miks": {
+    "gender": "TODO",
+    "species": "TODO",
+    "origin": "TODO",
+    "releaseYear": "TODO",
+    "releaseEpisode": "TODO",
+    "ultPoints": "TODO",
+    "affiliation": "TODO"
+  },
+  "neon": {
+    "gender": "female",
+    "species": "radiant",
+    "origin": ["PH"],
+    "releaseYear": 2022,
+    "releaseEpisode": "E4A1",
+    "ultPoints": "TODO",
+    "affiliation": "protocol"
+  },
+  "omen": {
+    "gender": "male",
+    "species": "TODO",
+    "origin": ["unknown"],
+    "releaseYear": 2020,
+    "releaseEpisode": "Beta",
+    "ultPoints": "TODO",
+    "affiliation": "protocol"
+  },
+  "phoenix": {
+    "gender": "male",
+    "species": "radiant",
+    "origin": ["GB"],
+    "releaseYear": 2020,
+    "releaseEpisode": "Beta",
+    "ultPoints": "TODO",
+    "affiliation": "protocol"
+  },
+  "raze": {
+    "gender": "female",
+    "species": "human",
+    "origin": ["BR"],
+    "releaseYear": 2020,
+    "releaseEpisode": "Beta",
+    "ultPoints": "TODO",
+    "affiliation": "protocol"
+  },
+  "reyna": {
+    "gender": "female",
+    "species": "radivoid",
+    "origin": ["MX"],
+    "releaseYear": 2020,
+    "releaseEpisode": "E1A1",
+    "ultPoints": "TODO",
+    "affiliation": "protocol"
+  },
+  "sage": {
+    "gender": "female",
+    "species": "radiant",
+    "origin": ["CN"],
+    "releaseYear": 2020,
+    "releaseEpisode": "Beta",
+    "ultPoints": "TODO",
+    "affiliation": "protocol"
+  },
+  "skye": {
+    "gender": "female",
+    "species": "radiant",
+    "origin": ["AU"],
+    "releaseYear": 2020,
+    "releaseEpisode": "E1A3",
+    "ultPoints": "TODO",
+    "affiliation": "protocol"
+  },
+  "sova": {
+    "gender": "male",
+    "species": "human",
+    "origin": ["RU"],
+    "releaseYear": 2020,
+    "releaseEpisode": "Beta",
+    "ultPoints": "TODO",
+    "affiliation": "protocol"
+  },
+  "tejo": {
+    "gender": "male",
+    "species": "human",
+    "origin": ["CO"],
+    "releaseYear": 2025,
+    "releaseEpisode": "S2025 A1",
+    "ultPoints": "TODO",
+    "affiliation": "protocol"
+  },
+  "veto": {
+    "gender": "TODO",
+    "species": "TODO",
+    "origin": "TODO",
+    "releaseYear": "TODO",
+    "releaseEpisode": "TODO",
+    "ultPoints": "TODO",
+    "affiliation": "TODO"
+  },
+  "viper": {
+    "gender": "female",
+    "species": "human",
+    "origin": ["US"],
+    "releaseYear": 2020,
+    "releaseEpisode": "Beta",
+    "ultPoints": "TODO",
+    "affiliation": "protocol"
+  },
+  "vyse": {
+    "gender": "female",
+    "species": "TODO",
+    "origin": "TODO",
+    "releaseYear": 2024,
+    "releaseEpisode": "E9A2",
+    "ultPoints": "TODO",
+    "affiliation": "protocol"
+  },
+  "waylay": {
+    "gender": "female",
+    "species": "radiant",
+    "origin": ["TH"],
+    "releaseYear": 2025,
+    "releaseEpisode": "S2025 A2",
+    "ultPoints": "TODO",
+    "affiliation": "protocol"
+  },
+  "yoru": {
+    "gender": "male",
+    "species": "radiant",
+    "origin": ["JP"],
+    "releaseYear": 2021,
+    "releaseEpisode": "E2A1",
+    "ultPoints": "TODO",
+    "affiliation": "protocol"
+  }
+}

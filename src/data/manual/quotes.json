@@ -1,0 +1,77 @@
+[
+  {
+    "agentId": "brimstone",
+    "text": { "en": "Open up the sky!", "es": "¡Abran el cielo!" },
+    "official": { "en": true, "es": false }
+  },
+  {
+    "agentId": "brimstone",
+    "text": { "en": "Prepare for hellfire!", "es": "¡Prepárense para el fuego del infierno!" },
+    "official": { "en": true, "es": false }
+  },
+  {
+    "agentId": "sova",
+    "text": { "en": "Nowhere to run!", "es": "¡No hay a dónde huir!" },
+    "official": { "en": true, "es": false }
+  },
+  {
+    "agentId": "sova",
+    "text": { "en": "I am the hunter!", "es": "¡Yo soy el cazador!" },
+    "official": { "en": true, "es": false }
+  },
+  {
+    "agentId": "sage",
+    "text": { "en": "Your duty is not over.", "es": "Tu deber no ha terminado." },
+    "official": { "en": true, "es": false }
+  },
+  {
+    "agentId": "cypher",
+    "text": { "en": "I know exactly where you are.", "es": "Sé exactamente dónde estás." },
+    "official": { "en": true, "es": false }
+  },
+  {
+    "agentId": "cypher",
+    "text": { "en": "Where is everyone hiding?", "es": "¿Dónde se esconden todos?" },
+    "official": { "en": true, "es": false }
+  },
+  {
+    "agentId": "raze",
+    "text": { "en": "Fire in the hole!", "es": "¡Fuego en el hoyo!" },
+    "official": { "en": true, "es": false }
+  },
+  {
+    "agentId": "phoenix",
+    "text": { "en": "Joke's over, you're dead!", "es": "Se acabó la broma, ¡estás muerto!" },
+    "official": { "en": true, "es": false }
+  },
+  {
+    "agentId": "jett",
+    "text": { "en": "Get out of my way!", "es": "¡Quítense de mi camino!" },
+    "official": { "en": true, "es": false }
+  },
+  {
+    "agentId": "jett",
+    "text": { "en": "Watch this!", "es": "¡Miren esto!" },
+    "official": { "en": true, "es": false }
+  },
+  {
+    "agentId": "viper",
+    "text": { "en": "Welcome to my world!", "es": "¡Bienvenidos a mi mundo!" },
+    "official": { "en": true, "es": false }
+  },
+  {
+    "agentId": "breach",
+    "text": { "en": "Off your feet!", "es": "¡Al suelo!" },
+    "official": { "en": true, "es": false }
+  },
+  {
+    "agentId": "killjoy",
+    "text": { "en": "You should run.", "es": "Deberías correr." },
+    "official": { "en": true, "es": false }
+  },
+  {
+    "agentId": "omen",
+    "text": { "en": "Scatter!", "es": "¡Dispérsense!" },
+    "official": { "en": true, "es": false }
+  }
+]

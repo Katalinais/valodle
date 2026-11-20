@@ -1,0 +1,1202 @@
+[
+  {
+    "id": "astra-C",
+    "agentId": "astra",
+    "key": "C",
+    "name": {
+      "es": "Pozo Gravitacional",
+      "en": "Gravity Well"
+    },
+    "icon": "https://media.valorant-api.com/agents/41fb69c1-4189-7b37-f117-bcaf1e96f1bf/abilities/grenade/displayicon.png"
+  },
+  {
+    "id": "astra-E",
+    "agentId": "astra",
+    "key": "E",
+    "name": {
+      "es": "Nebulosa",
+      "en": "Nebula"
+    },
+    "icon": "https://media.valorant-api.com/agents/41fb69c1-4189-7b37-f117-bcaf1e96f1bf/abilities/ability2/displayicon.png"
+  },
+  {
+    "id": "astra-Q",
+    "agentId": "astra",
+    "key": "Q",
+    "name": {
+      "es": "Pulso Estelar",
+      "en": "Nova Pulse"
+    },
+    "icon": "https://media.valorant-api.com/agents/41fb69c1-4189-7b37-f117-bcaf1e96f1bf/abilities/ability1/displayicon.png"
+  },
+  {
+    "id": "astra-X",
+    "agentId": "astra",
+    "key": "X",
+    "name": {
+      "es": "División Cósmica",
+      "en": "Cosmic Divide"
+    },
+    "icon": "https://media.valorant-api.com/agents/41fb69c1-4189-7b37-f117-bcaf1e96f1bf/abilities/ultimate/displayicon.png"
+  },
+  {
+    "id": "breach-C",
+    "agentId": "breach",
+    "key": "C",
+    "name": {
+      "es": "Réplica",
+      "en": "Aftershock"
+    },
+    "icon": "https://media.valorant-api.com/agents/5f8d3a7f-467b-97f3-062c-13acf203c006/abilities/grenade/displayicon.png"
+  },
+  {
+    "id": "breach-E",
+    "agentId": "breach",
+    "key": "E",
+    "name": {
+      "es": "Falla Sísmica",
+      "en": "Fault Line"
+    },
+    "icon": "https://media.valorant-api.com/agents/5f8d3a7f-467b-97f3-062c-13acf203c006/abilities/ability2/displayicon.png"
+  },
+  {
+    "id": "breach-Q",
+    "agentId": "breach",
+    "key": "Q",
+    "name": {
+      "es": "Fulgor",
+      "en": "Flashpoint"
+    },
+    "icon": "https://media.valorant-api.com/agents/5f8d3a7f-467b-97f3-062c-13acf203c006/abilities/ability1/displayicon.png"
+  },
+  {
+    "id": "breach-X",
+    "agentId": "breach",
+    "key": "X",
+    "name": {
+      "es": "Trueno Rodante",
+      "en": "Rolling Thunder"
+    },
+    "icon": "https://media.valorant-api.com/agents/5f8d3a7f-467b-97f3-062c-13acf203c006/abilities/ultimate/displayicon.png"
+  },
+  {
+    "id": "brimstone-C",
+    "agentId": "brimstone",
+    "key": "C",
+    "name": {
+      "es": "Baliza Potenciadora",
+      "en": "Stim Beacon"
+    },
+    "icon": "https://media.valorant-api.com/agents/9f0d8ba9-4140-b941-57d3-a7ad57c6b417/abilities/grenade/displayicon.png"
+  },
+  {
+    "id": "brimstone-E",
+    "agentId": "brimstone",
+    "key": "E",
+    "name": {
+      "es": "Humo Celestial",
+      "en": "Sky Smoke"
+    },
+    "icon": "https://media.valorant-api.com/agents/9f0d8ba9-4140-b941-57d3-a7ad57c6b417/abilities/ability2/displayicon.png"
+  },
+  {
+    "id": "brimstone-Q",
+    "agentId": "brimstone",
+    "key": "Q",
+    "name": {
+      "es": "La Incendiaria",
+      "en": "Incendiary"
+    },
+    "icon": "https://media.valorant-api.com/agents/9f0d8ba9-4140-b941-57d3-a7ad57c6b417/abilities/ability1/displayicon.png"
+  },
+  {
+    "id": "brimstone-X",
+    "agentId": "brimstone",
+    "key": "X",
+    "name": {
+      "es": "Ataque Orbital",
+      "en": "Orbital Strike"
+    },
+    "icon": "https://media.valorant-api.com/agents/9f0d8ba9-4140-b941-57d3-a7ad57c6b417/abilities/ultimate/displayicon.png"
+  },
+  {
+    "id": "chamber-C",
+    "agentId": "chamber",
+    "key": "C",
+    "name": {
+      "es": "Marca Registrada",
+      "en": "Trademark"
+    },
+    "icon": "https://media.valorant-api.com/agents/22697a3d-45bf-8dd7-4fec-84a9e28c69d7/abilities/grenade/displayicon.png"
+  },
+  {
+    "id": "chamber-E",
+    "agentId": "chamber",
+    "key": "E",
+    "name": {
+      "es": "Rendezvous",
+      "en": "Rendezvous"
+    },
+    "icon": "https://media.valorant-api.com/agents/22697a3d-45bf-8dd7-4fec-84a9e28c69d7/abilities/ability2/displayicon.png"
+  },
+  {
+    "id": "chamber-Q",
+    "agentId": "chamber",
+    "key": "Q",
+    "name": {
+      "es": "Cazador de Cabezas",
+      "en": "Headhunter"
+    },
+    "icon": "https://media.valorant-api.com/agents/22697a3d-45bf-8dd7-4fec-84a9e28c69d7/abilities/ability1/displayicon.png"
+  },
+  {
+    "id": "chamber-X",
+    "agentId": "chamber",
+    "key": "X",
+    "name": {
+      "es": "Tour de Force",
+      "en": "Tour De Force"
+    },
+    "icon": "https://media.valorant-api.com/agents/22697a3d-45bf-8dd7-4fec-84a9e28c69d7/abilities/ultimate/displayicon.png"
+  },
+  {
+    "id": "clove-C",
+    "agentId": "clove",
+    "key": "C",
+    "name": {
+      "es": "Tentempié",
+      "en": "Pick-me-up"
+    },
+    "icon": "https://media.valorant-api.com/agents/1dbf2edd-4729-0984-3115-daa5eed44993/abilities/grenade/displayicon.png"
+  },
+  {
+    "id": "clove-E",
+    "agentId": "clove",
+    "key": "E",
+    "name": {
+      "es": "Treta",
+      "en": "Ruse"
+    },
+    "icon": "https://media.valorant-api.com/agents/1dbf2edd-4729-0984-3115-daa5eed44993/abilities/ability2/displayicon.png"
+  },
+  {
+    "id": "clove-Q",
+    "agentId": "clove",
+    "key": "Q",
+    "name": {
+      "es": "Carambola",
+      "en": "Meddle"
+    },
+    "icon": "https://media.valorant-api.com/agents/1dbf2edd-4729-0984-3115-daa5eed44993/abilities/ability1/displayicon.png"
+  },
+  {
+    "id": "clove-X",
+    "agentId": "clove",
+    "key": "X",
+    "name": {
+      "es": "No Morí",
+      "en": "Not Dead Yet"
+    },
+    "icon": "https://media.valorant-api.com/agents/1dbf2edd-4729-0984-3115-daa5eed44993/abilities/ultimate/displayicon.png"
+  },
+  {
+    "id": "cypher-C",
+    "agentId": "cypher",
+    "key": "C",
+    "name": {
+      "es": "Cable Trampa",
+      "en": "Trapwire"
+    },
+    "icon": "https://media.valorant-api.com/agents/117ed9e3-49f3-6512-3ccf-0cada7e3823b/abilities/grenade/displayicon.png"
+  },
+  {
+    "id": "cypher-E",
+    "agentId": "cypher",
+    "key": "E",
+    "name": {
+      "es": "Cámara Espía",
+      "en": "Spycam"
+    },
+    "icon": "https://media.valorant-api.com/agents/117ed9e3-49f3-6512-3ccf-0cada7e3823b/abilities/ability2/displayicon.png"
+  },
+  {
+    "id": "cypher-Q",
+    "agentId": "cypher",
+    "key": "Q",
+    "name": {
+      "es": "Ciberjaula",
+      "en": "Cyber Cage"
+    },
+    "icon": "https://media.valorant-api.com/agents/117ed9e3-49f3-6512-3ccf-0cada7e3823b/abilities/ability1/displayicon.png"
+  },
+  {
+    "id": "cypher-X",
+    "agentId": "cypher",
+    "key": "X",
+    "name": {
+      "es": "Asalto Neural",
+      "en": "Neural Theft"
+    },
+    "icon": "https://media.valorant-api.com/agents/117ed9e3-49f3-6512-3ccf-0cada7e3823b/abilities/ultimate/displayicon.png"
+  },
+  {
+    "id": "deadlock-C",
+    "agentId": "deadlock",
+    "key": "C",
+    "name": {
+      "es": "Malla Protectora",
+      "en": "Barrier Mesh"
+    },
+    "icon": "https://media.valorant-api.com/agents/cc8b64c8-4b25-4ff9-6e7f-37b4da43d235/abilities/grenade/displayicon.png"
+  },
+  {
+    "id": "deadlock-E",
+    "agentId": "deadlock",
+    "key": "E",
+    "name": {
+      "es": "GravNet",
+      "en": "GravNet"
+    },
+    "icon": "https://media.valorant-api.com/agents/cc8b64c8-4b25-4ff9-6e7f-37b4da43d235/abilities/ability2/displayicon.png"
+  },
+  {
+    "id": "deadlock-Q",
+    "agentId": "deadlock",
+    "key": "Q",
+    "name": {
+      "es": "Sensor Sónico",
+      "en": "Sonic Sensor"
+    },
+    "icon": "https://media.valorant-api.com/agents/cc8b64c8-4b25-4ff9-6e7f-37b4da43d235/abilities/ability1/displayicon.png"
+  },
+  {
+    "id": "deadlock-X",
+    "agentId": "deadlock",
+    "key": "X",
+    "name": {
+      "es": "Aniquilación",
+      "en": "Annihilation"
+    },
+    "icon": "https://media.valorant-api.com/agents/cc8b64c8-4b25-4ff9-6e7f-37b4da43d235/abilities/ultimate/displayicon.png"
+  },
+  {
+    "id": "fade-C",
+    "agentId": "fade",
+    "key": "C",
+    "name": {
+      "es": "Acechadora",
+      "en": "Prowler"
+    },
+    "icon": "https://media.valorant-api.com/agents/dade69b4-4f5a-8528-247b-219e5a1facd6/abilities/grenade/displayicon.png"
+  },
+  {
+    "id": "fade-E",
+    "agentId": "fade",
+    "key": "E",
+    "name": {
+      "es": "Atormentar",
+      "en": "Haunt"
+    },
+    "icon": "https://media.valorant-api.com/agents/dade69b4-4f5a-8528-247b-219e5a1facd6/abilities/ability2/displayicon.png"
+  },
+  {
+    "id": "fade-Q",
+    "agentId": "fade",
+    "key": "Q",
+    "name": {
+      "es": "Capturar",
+      "en": "Seize"
+    },
+    "icon": "https://media.valorant-api.com/agents/dade69b4-4f5a-8528-247b-219e5a1facd6/abilities/ability1/displayicon.png"
+  },
+  {
+    "id": "fade-X",
+    "agentId": "fade",
+    "key": "X",
+    "name": {
+      "es": "Anochecer",
+      "en": "Nightfall"
+    },
+    "icon": "https://media.valorant-api.com/agents/dade69b4-4f5a-8528-247b-219e5a1facd6/abilities/ultimate/displayicon.png"
+  },
+  {
+    "id": "gekko-C",
+    "agentId": "gekko",
+    "key": "C",
+    "name": {
+      "es": "Pogo Brutal",
+      "en": "Mosh Pit"
+    },
+    "icon": "https://media.valorant-api.com/agents/e370fa57-4757-3604-3648-499e1f642d3f/abilities/grenade/displayicon.png"
+  },
+  {
+    "id": "gekko-E",
+    "agentId": "gekko",
+    "key": "E",
+    "name": {
+      "es": "Vértigo",
+      "en": "Dizzy"
+    },
+    "icon": "https://media.valorant-api.com/agents/e370fa57-4757-3604-3648-499e1f642d3f/abilities/ability2/displayicon.png"
+  },
+  {
+    "id": "gekko-Q",
+    "agentId": "gekko",
+    "key": "Q",
+    "name": {
+      "es": "Carnalito",
+      "en": "Wingman"
+    },
+    "icon": "https://media.valorant-api.com/agents/e370fa57-4757-3604-3648-499e1f642d3f/abilities/ability1/displayicon.png"
+  },
+  {
+    "id": "gekko-X",
+    "agentId": "gekko",
+    "key": "X",
+    "name": {
+      "es": "Paliza",
+      "en": "Thrash"
+    },
+    "icon": "https://media.valorant-api.com/agents/e370fa57-4757-3604-3648-499e1f642d3f/abilities/ultimate/displayicon.png"
+  },
+  {
+    "id": "harbor-C",
+    "agentId": "harbor",
+    "key": "C",
+    "name": {
+      "es": "Remolino Ciclónico",
+      "en": "Storm Surge"
+    },
+    "icon": "https://media.valorant-api.com/agents/95b78ed7-4637-86d9-7e41-71ba8c293152/abilities/grenade/displayicon.png"
+  },
+  {
+    "id": "harbor-E",
+    "agentId": "harbor",
+    "key": "E",
+    "name": {
+      "es": "Cúpula",
+      "en": "Cove"
+    },
+    "icon": "https://media.valorant-api.com/agents/95b78ed7-4637-86d9-7e41-71ba8c293152/abilities/ability2/displayicon.png"
+  },
+  {
+    "id": "harbor-Q",
+    "agentId": "harbor",
+    "key": "Q",
+    "name": {
+      "es": "Marea Alta",
+      "en": "High Tide"
+    },
+    "icon": "https://media.valorant-api.com/agents/95b78ed7-4637-86d9-7e41-71ba8c293152/abilities/ability1/displayicon.png"
+  },
+  {
+    "id": "harbor-X",
+    "agentId": "harbor",
+    "key": "X",
+    "name": {
+      "es": "Cataclismo",
+      "en": "Reckoning"
+    },
+    "icon": "https://media.valorant-api.com/agents/95b78ed7-4637-86d9-7e41-71ba8c293152/abilities/ultimate/displayicon.png"
+  },
+  {
+    "id": "hush-C",
+    "agentId": "hush",
+    "key": "C",
+    "name": {
+      "es": "Áncora",
+      "en": "Flow"
+    },
+    "icon": "https://media.valorant-api.com/agents/ddd5a15c-4fbe-42fa-3789-11a55ca5ee04/abilities/grenade/displayicon.png"
+  },
+  {
+    "id": "hush-E",
+    "agentId": "hush",
+    "key": "E",
+    "name": {
+      "es": "Cinestesia",
+      "en": "Displacement"
+    },
+    "icon": "https://media.valorant-api.com/agents/ddd5a15c-4fbe-42fa-3789-11a55ca5ee04/abilities/ability2/displayicon.png"
+  },
+  {
+    "id": "hush-Q",
+    "agentId": "hush",
+    "key": "Q",
+    "name": {
+      "es": "Orbe Flash",
+      "en": "Flashbulb"
+    },
+    "icon": "https://media.valorant-api.com/agents/ddd5a15c-4fbe-42fa-3789-11a55ca5ee04/abilities/ability1/displayicon.png"
+  },
+  {
+    "id": "hush-X",
+    "agentId": "hush",
+    "key": "X",
+    "name": {
+      "es": "Suspensión",
+      "en": "Suspension"
+    },
+    "icon": "https://media.valorant-api.com/agents/ddd5a15c-4fbe-42fa-3789-11a55ca5ee04/abilities/ultimate/displayicon.png"
+  },
+  {
+    "id": "iso-C",
+    "agentId": "iso",
+    "key": "C",
+    "name": {
+      "es": "Contingencia",
+      "en": "Contingency"
+    },
+    "icon": "https://media.valorant-api.com/agents/0e38b510-41a8-5780-5e8f-568b2a4f2d6c/abilities/grenade/displayicon.png"
+  },
+  {
+    "id": "iso-E",
+    "agentId": "iso",
+    "key": "E",
+    "name": {
+      "es": "Remate",
+      "en": "Double Tap"
+    },
+    "icon": "https://media.valorant-api.com/agents/0e38b510-41a8-5780-5e8f-568b2a4f2d6c/abilities/ability2/displayicon.png"
+  },
+  {
+    "id": "iso-Q",
+    "agentId": "iso",
+    "key": "Q",
+    "name": {
+      "es": "Recorte",
+      "en": "Undercut"
+    },
+    "icon": "https://media.valorant-api.com/agents/0e38b510-41a8-5780-5e8f-568b2a4f2d6c/abilities/ability1/displayicon.png"
+  },
+  {
+    "id": "iso-X",
+    "agentId": "iso",
+    "key": "X",
+    "name": {
+      "es": "Lista Negra",
+      "en": "Kill Contract"
+    },
+    "icon": "https://media.valorant-api.com/agents/0e38b510-41a8-5780-5e8f-568b2a4f2d6c/abilities/ultimate/displayicon.png"
+  },
+  {
+    "id": "jett-C",
+    "agentId": "jett",
+    "key": "C",
+    "name": {
+      "es": "Nube Explosiva",
+      "en": "Cloudburst"
+    },
+    "icon": "https://media.valorant-api.com/agents/add6443a-41bd-e414-f6ad-e58d267f4e95/abilities/grenade/displayicon.png"
+  },
+  {
+    "id": "jett-E",
+    "agentId": "jett",
+    "key": "E",
+    "name": {
+      "es": "Impulso Ciclón",
+      "en": "Tailwind"
+    },
+    "icon": "https://media.valorant-api.com/agents/add6443a-41bd-e414-f6ad-e58d267f4e95/abilities/ability2/displayicon.png"
+  },
+  {
+    "id": "jett-Q",
+    "agentId": "jett",
+    "key": "Q",
+    "name": {
+      "es": "Ráfaga Ascendente",
+      "en": "Updraft"
+    },
+    "icon": "https://media.valorant-api.com/agents/add6443a-41bd-e414-f6ad-e58d267f4e95/abilities/ability1/displayicon.png"
+  },
+  {
+    "id": "jett-X",
+    "agentId": "jett",
+    "key": "X",
+    "name": {
+      "es": "Tormenta de Cuchillas",
+      "en": "Blade Storm"
+    },
+    "icon": "https://media.valorant-api.com/agents/add6443a-41bd-e414-f6ad-e58d267f4e95/abilities/ultimate/displayicon.png"
+  },
+  {
+    "id": "kayo-C",
+    "agentId": "kayo",
+    "key": "C",
+    "name": {
+      "es": "FRAG/mentación",
+      "en": "FRAG/ment"
+    },
+    "icon": "https://media.valorant-api.com/agents/601dbbe7-43ce-be57-2a40-4abd24953621/abilities/grenade/displayicon.png"
+  },
+  {
+    "id": "kayo-E",
+    "agentId": "kayo",
+    "key": "E",
+    "name": {
+      "es": "Punto/CERO",
+      "en": "ZERO/point"
+    },
+    "icon": "https://media.valorant-api.com/agents/601dbbe7-43ce-be57-2a40-4abd24953621/abilities/ability2/displayicon.png"
+  },
+  {
+    "id": "kayo-Q",
+    "agentId": "kayo",
+    "key": "Q",
+    "name": {
+      "es": "Memoria/FLASH",
+      "en": "FLASH/drive"
+    },
+    "icon": "https://media.valorant-api.com/agents/601dbbe7-43ce-be57-2a40-4abd24953621/abilities/ability1/displayicon.png"
+  },
+  {
+    "id": "kayo-X",
+    "agentId": "kayo",
+    "key": "X",
+    "name": {
+      "es": "NULL/cmd",
+      "en": "NULL/cmd"
+    },
+    "icon": "https://media.valorant-api.com/agents/601dbbe7-43ce-be57-2a40-4abd24953621/abilities/ultimate/displayicon.png"
+  },
+  {
+    "id": "killjoy-C",
+    "agentId": "killjoy",
+    "key": "C",
+    "name": {
+      "es": "Nanoplaga",
+      "en": "Nanoswarm"
+    },
+    "icon": "https://media.valorant-api.com/agents/1e58de9c-4950-5125-93e9-a0aee9f98746/abilities/grenade/displayicon.png"
+  },
+  {
+    "id": "killjoy-E",
+    "agentId": "killjoy",
+    "key": "E",
+    "name": {
+      "es": "Torreta",
+      "en": "TURRET"
+    },
+    "icon": "https://media.valorant-api.com/agents/1e58de9c-4950-5125-93e9-a0aee9f98746/abilities/ability2/displayicon.png"
+  },
+  {
+    "id": "killjoy-Q",
+    "agentId": "killjoy",
+    "key": "Q",
+    "name": {
+      "es": "Alarmabot",
+      "en": "ALARMBOT"
+    },
+    "icon": "https://media.valorant-api.com/agents/1e58de9c-4950-5125-93e9-a0aee9f98746/abilities/ability1/displayicon.png"
+  },
+  {
+    "id": "killjoy-X",
+    "agentId": "killjoy",
+    "key": "X",
+    "name": {
+      "es": "Contención",
+      "en": "Lockdown"
+    },
+    "icon": "https://media.valorant-api.com/agents/1e58de9c-4950-5125-93e9-a0aee9f98746/abilities/ultimate/displayicon.png"
+  },
+  {
+    "id": "miks-C",
+    "agentId": "miks",
+    "key": "C",
+    "name": {
+      "es": "Pulso M",
+      "en": "M-pulse"
+    },
+    "icon": "https://media.valorant-api.com/agents/7c8a4701-4de6-9355-b254-e09bc2a34b72/abilities/grenade/displayicon.png"
+  },
+  {
+    "id": "miks-E",
+    "agentId": "miks",
+    "key": "E",
+    "name": {
+      "es": "Campo Sonoro",
+      "en": "Waveform"
+    },
+    "icon": "https://media.valorant-api.com/agents/7c8a4701-4de6-9355-b254-e09bc2a34b72/abilities/ability2/displayicon.png"
+  },
+  {
+    "id": "miks-Q",
+    "agentId": "miks",
+    "key": "Q",
+    "name": {
+      "es": "Armonía",
+      "en": "Harmonize"
+    },
+    "icon": "https://media.valorant-api.com/agents/7c8a4701-4de6-9355-b254-e09bc2a34b72/abilities/ability1/displayicon.png"
+  },
+  {
+    "id": "miks-X",
+    "agentId": "miks",
+    "key": "X",
+    "name": {
+      "es": "Frecuencia Sísmica",
+      "en": "Bassquake"
+    },
+    "icon": "https://media.valorant-api.com/agents/7c8a4701-4de6-9355-b254-e09bc2a34b72/abilities/ultimate/displayicon.png"
+  },
+  {
+    "id": "neon-C",
+    "agentId": "neon",
+    "key": "C",
+    "name": {
+      "es": "Carril Rápido",
+      "en": "Fast Lane"
+    },
+    "icon": "https://media.valorant-api.com/agents/bb2a4828-46eb-8cd1-e765-15848195d751/abilities/grenade/displayicon.png"
+  },
+  {
+    "id": "neon-E",
+    "agentId": "neon",
+    "key": "E",
+    "name": {
+      "es": "Velocidad Relámpago",
+      "en": "High Gear"
+    },
+    "icon": "https://media.valorant-api.com/agents/bb2a4828-46eb-8cd1-e765-15848195d751/abilities/ability2/displayicon.png"
+  },
+  {
+    "id": "neon-Q",
+    "agentId": "neon",
+    "key": "Q",
+    "name": {
+      "es": "Electrorrebote",
+      "en": "Relay Bolt"
+    },
+    "icon": "https://media.valorant-api.com/agents/bb2a4828-46eb-8cd1-e765-15848195d751/abilities/ability1/displayicon.png"
+  },
+  {
+    "id": "neon-X",
+    "agentId": "neon",
+    "key": "X",
+    "name": {
+      "es": "Potencia Máxima",
+      "en": "Overdrive"
+    },
+    "icon": "https://media.valorant-api.com/agents/bb2a4828-46eb-8cd1-e765-15848195d751/abilities/ultimate/displayicon.png"
+  },
+  {
+    "id": "omen-C",
+    "agentId": "omen",
+    "key": "C",
+    "name": {
+      "es": "Paso Encubierto",
+      "en": "Shrouded Step"
+    },
+    "icon": "https://media.valorant-api.com/agents/8e253930-4c05-31dd-1b6c-968525494517/abilities/grenade/displayicon.png"
+  },
+  {
+    "id": "omen-E",
+    "agentId": "omen",
+    "key": "E",
+    "name": {
+      "es": "Manto Oscuro",
+      "en": "Dark Cover"
+    },
+    "icon": "https://media.valorant-api.com/agents/8e253930-4c05-31dd-1b6c-968525494517/abilities/ability2/displayicon.png"
+  },
+  {
+    "id": "omen-Q",
+    "agentId": "omen",
+    "key": "Q",
+    "name": {
+      "es": "Paranoia",
+      "en": "Paranoia"
+    },
+    "icon": "https://media.valorant-api.com/agents/8e253930-4c05-31dd-1b6c-968525494517/abilities/ability1/displayicon.png"
+  },
+  {
+    "id": "omen-X",
+    "agentId": "omen",
+    "key": "X",
+    "name": {
+      "es": "Desde las Sombras",
+      "en": "From the Shadows"
+    },
+    "icon": "https://media.valorant-api.com/agents/8e253930-4c05-31dd-1b6c-968525494517/abilities/ultimate/displayicon.png"
+  },
+  {
+    "id": "phoenix-C",
+    "agentId": "phoenix",
+    "key": "C",
+    "name": {
+      "es": "Muro Abrasador",
+      "en": "Blaze"
+    },
+    "icon": "https://media.valorant-api.com/agents/eb93336a-449b-9c1b-0a54-a891f7921d69/abilities/grenade/displayicon.png"
+  },
+  {
+    "id": "phoenix-E",
+    "agentId": "phoenix",
+    "key": "E",
+    "name": {
+      "es": "Destello en Curva",
+      "en": "Curveball"
+    },
+    "icon": "https://media.valorant-api.com/agents/eb93336a-449b-9c1b-0a54-a891f7921d69/abilities/ability2/displayicon.png"
+  },
+  {
+    "id": "phoenix-Q",
+    "agentId": "phoenix",
+    "key": "Q",
+    "name": {
+      "es": "Manitas Calientes",
+      "en": "Hot Hands"
+    },
+    "icon": "https://media.valorant-api.com/agents/eb93336a-449b-9c1b-0a54-a891f7921d69/abilities/ability1/displayicon.png"
+  },
+  {
+    "id": "phoenix-X",
+    "agentId": "phoenix",
+    "key": "X",
+    "name": {
+      "es": "Va de Fuego",
+      "en": "Run it Back"
+    },
+    "icon": "https://media.valorant-api.com/agents/eb93336a-449b-9c1b-0a54-a891f7921d69/abilities/ultimate/displayicon.png"
+  },
+  {
+    "id": "raze-C",
+    "agentId": "raze",
+    "key": "C",
+    "name": {
+      "es": "Bumbot",
+      "en": "Boom Bot"
+    },
+    "icon": "https://media.valorant-api.com/agents/f94c3b30-42be-e959-889c-5aa313dba261/abilities/grenade/displayicon.png"
+  },
+  {
+    "id": "raze-E",
+    "agentId": "raze",
+    "key": "E",
+    "name": {
+      "es": "Carcasas de Pintura",
+      "en": "Paint Shells"
+    },
+    "icon": "https://media.valorant-api.com/agents/f94c3b30-42be-e959-889c-5aa313dba261/abilities/ability2/displayicon.png"
+  },
+  {
+    "id": "raze-Q",
+    "agentId": "raze",
+    "key": "Q",
+    "name": {
+      "es": "Paquete Explosivo",
+      "en": "Blast Pack"
+    },
+    "icon": "https://media.valorant-api.com/agents/f94c3b30-42be-e959-889c-5aa313dba261/abilities/ability1/displayicon.png"
+  },
+  {
+    "id": "raze-X",
+    "agentId": "raze",
+    "key": "X",
+    "name": {
+      "es": "Tumbadivas",
+      "en": "Showstopper"
+    },
+    "icon": "https://media.valorant-api.com/agents/f94c3b30-42be-e959-889c-5aa313dba261/abilities/ultimate/displayicon.png"
+  },
+  {
+    "id": "reyna-C",
+    "agentId": "reyna",
+    "key": "C",
+    "name": {
+      "es": "La Mirada",
+      "en": "Leer"
+    },
+    "icon": "https://media.valorant-api.com/agents/a3bfb853-43b2-7238-a4f1-ad90e9e46bcc/abilities/grenade/displayicon.png"
+  },
+  {
+    "id": "reyna-E",
+    "agentId": "reyna",
+    "key": "E",
+    "name": {
+      "es": "Desechar",
+      "en": "Dismiss"
+    },
+    "icon": "https://media.valorant-api.com/agents/a3bfb853-43b2-7238-a4f1-ad90e9e46bcc/abilities/ability2/displayicon.png"
+  },
+  {
+    "id": "reyna-Q",
+    "agentId": "reyna",
+    "key": "Q",
+    "name": {
+      "es": "Devorar",
+      "en": "Devour"
+    },
+    "icon": "https://media.valorant-api.com/agents/a3bfb853-43b2-7238-a4f1-ad90e9e46bcc/abilities/ability1/displayicon.png"
+  },
+  {
+    "id": "reyna-X",
+    "agentId": "reyna",
+    "key": "X",
+    "name": {
+      "es": "La Emperatriz",
+      "en": "Empress"
+    },
+    "icon": "https://media.valorant-api.com/agents/a3bfb853-43b2-7238-a4f1-ad90e9e46bcc/abilities/ultimate/displayicon.png"
+  },
+  {
+    "id": "sage-C",
+    "agentId": "sage",
+    "key": "C",
+    "name": {
+      "es": "Orbe de Barrera",
+      "en": "Barrier Orb"
+    },
+    "icon": "https://media.valorant-api.com/agents/569fdd95-4d10-43ab-ca70-79becc718b46/abilities/grenade/displayicon.png"
+  },
+  {
+    "id": "sage-E",
+    "agentId": "sage",
+    "key": "E",
+    "name": {
+      "es": "Orbe Curativo",
+      "en": "Healing Orb"
+    },
+    "icon": "https://media.valorant-api.com/agents/569fdd95-4d10-43ab-ca70-79becc718b46/abilities/ability2/displayicon.png"
+  },
+  {
+    "id": "sage-Q",
+    "agentId": "sage",
+    "key": "Q",
+    "name": {
+      "es": "Orbe Ralentizador",
+      "en": "Slow Orb"
+    },
+    "icon": "https://media.valorant-api.com/agents/569fdd95-4d10-43ab-ca70-79becc718b46/abilities/ability1/displayicon.png"
+  },
+  {
+    "id": "sage-X",
+    "agentId": "sage",
+    "key": "X",
+    "name": {
+      "es": "Resurrección",
+      "en": "Resurrection"
+    },
+    "icon": "https://media.valorant-api.com/agents/569fdd95-4d10-43ab-ca70-79becc718b46/abilities/ultimate/displayicon.png"
+  },
+  {
+    "id": "skye-C",
+    "agentId": "skye",
+    "key": "C",
+    "name": {
+      "es": "Regeneración",
+      "en": "Regrowth"
+    },
+    "icon": "https://media.valorant-api.com/agents/6f2a04ca-43e0-be17-7f36-b3908627744d/abilities/grenade/displayicon.png"
+  },
+  {
+    "id": "skye-E",
+    "agentId": "skye",
+    "key": "E",
+    "name": {
+      "es": "Luz Guía",
+      "en": "Guiding Light"
+    },
+    "icon": "https://media.valorant-api.com/agents/6f2a04ca-43e0-be17-7f36-b3908627744d/abilities/ability2/displayicon.png"
+  },
+  {
+    "id": "skye-Q",
+    "agentId": "skye",
+    "key": "Q",
+    "name": {
+      "es": "Forjacaminos",
+      "en": "Trailblazer"
+    },
+    "icon": "https://media.valorant-api.com/agents/6f2a04ca-43e0-be17-7f36-b3908627744d/abilities/ability1/displayicon.png"
+  },
+  {
+    "id": "skye-X",
+    "agentId": "skye",
+    "key": "X",
+    "name": {
+      "es": "Buscadores",
+      "en": "Seekers"
+    },
+    "icon": "https://media.valorant-api.com/agents/6f2a04ca-43e0-be17-7f36-b3908627744d/abilities/ultimate/displayicon.png"
+  },
+  {
+    "id": "sova-C",
+    "agentId": "sova",
+    "key": "C",
+    "name": {
+      "es": "Dron Búho",
+      "en": "Owl Drone"
+    },
+    "icon": "https://media.valorant-api.com/agents/320b2a48-4d9b-a075-30f1-1f93a9b638fa/abilities/grenade/displayicon.png"
+  },
+  {
+    "id": "sova-E",
+    "agentId": "sova",
+    "key": "E",
+    "name": {
+      "es": "Proyectil Rastreador",
+      "en": "Recon Bolt"
+    },
+    "icon": "https://media.valorant-api.com/agents/320b2a48-4d9b-a075-30f1-1f93a9b638fa/abilities/ability2/displayicon.png"
+  },
+  {
+    "id": "sova-Q",
+    "agentId": "sova",
+    "key": "Q",
+    "name": {
+      "es": "Proyectil Eléctrico",
+      "en": "Shock Bolt"
+    },
+    "icon": "https://media.valorant-api.com/agents/320b2a48-4d9b-a075-30f1-1f93a9b638fa/abilities/ability1/displayicon.png"
+  },
+  {
+    "id": "sova-X",
+    "agentId": "sova",
+    "key": "X",
+    "name": {
+      "es": "Furia del Cazador",
+      "en": "Hunter's Fury"
+    },
+    "icon": "https://media.valorant-api.com/agents/320b2a48-4d9b-a075-30f1-1f93a9b638fa/abilities/ultimate/displayicon.png"
+  },
+  {
+    "id": "tejo-C",
+    "agentId": "tejo",
+    "key": "C",
+    "name": {
+      "es": "Dron Furtivo",
+      "en": "Stealth Drone"
+    },
+    "icon": "https://media.valorant-api.com/agents/b444168c-4e35-8076-db47-ef9bf368f384/abilities/grenade/displayicon.png"
+  },
+  {
+    "id": "tejo-E",
+    "agentId": "tejo",
+    "key": "E",
+    "name": {
+      "es": "Misiles Crucero",
+      "en": "Guided Salvo"
+    },
+    "icon": "https://media.valorant-api.com/agents/b444168c-4e35-8076-db47-ef9bf368f384/abilities/ability2/displayicon.png"
+  },
+  {
+    "id": "tejo-Q",
+    "agentId": "tejo",
+    "key": "Q",
+    "name": {
+      "es": "Entrega Especial",
+      "en": "Special Delivery"
+    },
+    "icon": "https://media.valorant-api.com/agents/b444168c-4e35-8076-db47-ef9bf368f384/abilities/ability1/displayicon.png"
+  },
+  {
+    "id": "tejo-X",
+    "agentId": "tejo",
+    "key": "X",
+    "name": {
+      "es": "Armagedón",
+      "en": "Armageddon"
+    },
+    "icon": "https://media.valorant-api.com/agents/b444168c-4e35-8076-db47-ef9bf368f384/abilities/ultimate/displayicon.png"
+  },
+  {
+    "id": "veto-C",
+    "agentId": "veto",
+    "key": "C",
+    "name": {
+      "es": "Atajo",
+      "en": "Crosscut"
+    },
+    "icon": "https://media.valorant-api.com/agents/92eeef5d-43b5-1d4a-8d03-b3927a09034b/abilities/grenade/displayicon.png"
+  },
+  {
+    "id": "veto-E",
+    "agentId": "veto",
+    "key": "E",
+    "name": {
+      "es": "Interceptor",
+      "en": "Interceptor"
+    },
+    "icon": "https://media.valorant-api.com/agents/92eeef5d-43b5-1d4a-8d03-b3927a09034b/abilities/ability2/displayicon.png"
+  },
+  {
+    "id": "veto-Q",
+    "agentId": "veto",
+    "key": "Q",
+    "name": {
+      "es": "Correa",
+      "en": "Chokehold"
+    },
+    "icon": "https://media.valorant-api.com/agents/92eeef5d-43b5-1d4a-8d03-b3927a09034b/abilities/ability1/displayicon.png"
+  },
+  {
+    "id": "veto-X",
+    "agentId": "veto",
+    "key": "X",
+    "name": {
+      "es": "Evolución",
+      "en": "Evolution"
+    },
+    "icon": "https://media.valorant-api.com/agents/92eeef5d-43b5-1d4a-8d03-b3927a09034b/abilities/ultimate/displayicon.png"
+  },
+  {
+    "id": "viper-C",
+    "agentId": "viper",
+    "key": "C",
+    "name": {
+      "es": "Mordedura",
+      "en": "Snake Bite"
+    },
+    "icon": "https://media.valorant-api.com/agents/707eab51-4836-f488-046a-cda6bf494859/abilities/grenade/displayicon.png"
+  },
+  {
+    "id": "viper-E",
+    "agentId": "viper",
+    "key": "E",
+    "name": {
+      "es": "Cortina Tóxica",
+      "en": "Toxic Screen"
+    },
+    "icon": "https://media.valorant-api.com/agents/707eab51-4836-f488-046a-cda6bf494859/abilities/ability2/displayicon.png"
+  },
+  {
+    "id": "viper-Q",
+    "agentId": "viper",
+    "key": "Q",
+    "name": {
+      "es": "Nube Venenosa",
+      "en": "Poison Cloud"
+    },
+    "icon": "https://media.valorant-api.com/agents/707eab51-4836-f488-046a-cda6bf494859/abilities/ability1/displayicon.png"
+  },
+  {
+    "id": "viper-X",
+    "agentId": "viper",
+    "key": "X",
+    "name": {
+      "es": "Fosa Vipérea",
+      "en": "Viper's Pit"
+    },
+    "icon": "https://media.valorant-api.com/agents/707eab51-4836-f488-046a-cda6bf494859/abilities/ultimate/displayicon.png"
+  },
+  {
+    "id": "vyse-C",
+    "agentId": "vyse",
+    "key": "C",
+    "name": {
+      "es": "Enredadera Filosa",
+      "en": "Razorvine"
+    },
+    "icon": "https://media.valorant-api.com/agents/efba5359-4016-a1e5-7626-b1ae76895940/abilities/grenade/displayicon.png"
+  },
+  {
+    "id": "vyse-E",
+    "agentId": "vyse",
+    "key": "E",
+    "name": {
+      "es": "Rosa Metálica",
+      "en": "Arc Rose"
+    },
+    "icon": "https://media.valorant-api.com/agents/efba5359-4016-a1e5-7626-b1ae76895940/abilities/ability2/displayicon.png"
+  },
+  {
+    "id": "vyse-Q",
+    "agentId": "vyse",
+    "key": "Q",
+    "name": {
+      "es": "Cortacaminos",
+      "en": "Shear"
+    },
+    "icon": "https://media.valorant-api.com/agents/efba5359-4016-a1e5-7626-b1ae76895940/abilities/ability1/displayicon.png"
+  },
+  {
+    "id": "vyse-X",
+    "agentId": "vyse",
+    "key": "X",
+    "name": {
+      "es": "Jardín Magnético",
+      "en": "Steel Garden"
+    },
+    "icon": "https://media.valorant-api.com/agents/efba5359-4016-a1e5-7626-b1ae76895940/abilities/ultimate/displayicon.png"
+  },
+  {
+    "id": "waylay-C",
+    "agentId": "waylay",
+    "key": "C",
+    "name": {
+      "es": "Saturación",
+      "en": "Saturate"
+    },
+    "icon": "https://media.valorant-api.com/agents/df1cb487-4902-002e-5c17-d28e83e78588/abilities/grenade/displayicon.png"
+  },
+  {
+    "id": "waylay-E",
+    "agentId": "waylay",
+    "key": "E",
+    "name": {
+      "es": "Refracción",
+      "en": "Refract"
+    },
+    "icon": "https://media.valorant-api.com/agents/df1cb487-4902-002e-5c17-d28e83e78588/abilities/ability2/displayicon.png"
+  },
+  {
+    "id": "waylay-Q",
+    "agentId": "waylay",
+    "key": "Q",
+    "name": {
+      "es": "Velocidad de la Luz",
+      "en": "Lightspeed"
+    },
+    "icon": "https://media.valorant-api.com/agents/df1cb487-4902-002e-5c17-d28e83e78588/abilities/ability1/displayicon.png"
+  },
+  {
+    "id": "waylay-X",
+    "agentId": "waylay",
+    "key": "X",
+    "name": {
+      "es": "Ilusión Convergente",
+      "en": "Convergent Paths"
+    },
+    "icon": "https://media.valorant-api.com/agents/df1cb487-4902-002e-5c17-d28e83e78588/abilities/ultimate/displayicon.png"
+  },
+  {
+    "id": "yoru-C",
+    "agentId": "yoru",
+    "key": "C",
+    "name": {
+      "es": "Engaño",
+      "en": "FAKEOUT"
+    },
+    "icon": "https://media.valorant-api.com/agents/7f94d92c-4234-0a36-9646-3a87eb8b5c89/abilities/grenade/displayicon.png"
+  },
+  {
+    "id": "yoru-E",
+    "agentId": "yoru",
+    "key": "E",
+    "name": {
+      "es": "Infiltración",
+      "en": "GATECRASH"
+    },
+    "icon": "https://media.valorant-api.com/agents/7f94d92c-4234-0a36-9646-3a87eb8b5c89/abilities/ability2/displayicon.png"
+  },
+  {
+    "id": "yoru-Q",
+    "agentId": "yoru",
+    "key": "Q",
+    "name": {
+      "es": "Punto Ciego",
+      "en": "BLINDSIDE"
+    },
+    "icon": "https://media.valorant-api.com/agents/7f94d92c-4234-0a36-9646-3a87eb8b5c89/abilities/ability1/displayicon.png"
+  },
+  {
+    "id": "yoru-X",
+    "agentId": "yoru",
+    "key": "X",
+    "name": {
+      "es": "Cambio Dimensional",
+      "en": "DIMENSIONAL DRIFT"
+    },
+    "icon": "https://media.valorant-api.com/agents/7f94d92c-4234-0a36-9646-3a87eb8b5c89/abilities/ultimate/displayicon.png"
+  }
+]
