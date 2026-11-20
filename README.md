@@ -74,7 +74,7 @@ Está en `src/lib/daily.ts`:
 
 ### Vercel (recomendado)
 
-1. Importa el repositorio en Vercel. `vercel.json` ya configura el build y `out/` como salida.
+1. Importa el repositorio en Vercel. Detecta Next.js y el export estático solo; no configures "Output Directory" (déjalo vacío).
 2. Define la variable `NEXT_PUBLIC_SITE_URL` con tu dominio (por ejemplo `https://valorantdle.vercel.app`). Se usa en el enlace de "Compartir", el sitemap y los metadatos OG.
 
 ### GitHub Pages / cualquier hosting estático
