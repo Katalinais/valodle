@@ -9,6 +9,10 @@ import { gameKey, useGameStore, visibleStreak } from "@/store/gameStore";
 import { Countdown } from "@/components/Countdown";
 import { challengeLabel } from "@/components/ModeShell";
 import { ArrowRightIcon, CheckIcon, FlameIcon, ModeIcon } from "@/components/icons";
+import mapRegistry from "@/data/generated/registry/map.json";
+
+/** Modos sin datos todavía (pool vacío): se muestran como "Próximamente". */
+const SOON = new Set<string>(Object.keys(mapRegistry).length ? [] : ["map"]);
 
 export default function HomePage() {
   const { t, locale } = useI18n();
@@ -20,9 +24,11 @@ export default function HomePage() {
 
   const statuses = MODES.map((m) => {
     const game = ready ? games[gameKey(m.id, today.dateKey)] : undefined;
+    if (SOON.has(m.id)) return "soon";
     return game?.won ? "done" : game?.guesses.length ? "playing" : "new";
   });
   const done = statuses.filter((s) => s === "done").length;
+  const playable = statuses.filter((s) => s !== "soon").length;
 
   return (
     <section className="flex flex-col items-center gap-7">
@@ -39,23 +45,23 @@ export default function HomePage() {
       <div className="w-full max-w-md" aria-live="polite">
         <div className="mb-2 flex items-center justify-between text-xs font-semibold uppercase tracking-widest text-val-muted">
           <span>{t("home.today")}</span>
-          <span data-testid="daily-progress">
-            {t("home.progress", { done, total: MODES.length })}
-          </span>
+          <span data-testid="daily-progress">{t("home.progress", { done, total: playable })}</span>
         </div>
         <div className="flex gap-1.5" aria-hidden>
-          {statuses.map((s, i) => (
-            <span
-              key={MODES[i].id}
-              className={`h-1.5 flex-1 rounded-full transition-colors duration-500 ${
-                s === "done"
-                  ? "bg-hit shadow-[0_0_8px_rgb(63_163_77/0.7)]"
-                  : s === "playing"
-                    ? "bg-partial"
-                    : "bg-white/10"
-              }`}
-            />
-          ))}
+          {statuses.map((s, i) =>
+            s === "soon" ? null : (
+              <span
+                key={MODES[i].id}
+                className={`h-1.5 flex-1 rounded-full transition-colors duration-500 ${
+                  s === "done"
+                    ? "bg-hit shadow-[0_0_8px_rgb(63_163_77/0.7)]"
+                    : s === "playing"
+                      ? "bg-partial"
+                      : "bg-white/10"
+                }`}
+              />
+            ),
+          )}
         </div>
       </div>
 
@@ -74,7 +80,7 @@ export default function HomePage() {
                 href={modeHref(locale, m.id)}
                 data-testid={`mode-card-${m.id}`}
                 data-status={status}
-                className="panel group flex items-center gap-4 p-4 transition duration-200 hover:-translate-y-0.5 hover:shadow-[0_14px_30px_-12px_rgb(255_70_85/0.45)]"
+                className={`panel group flex items-center gap-4 p-4 transition duration-200 ${status === "soon" ? "opacity-60" : ""} hover:-translate-y-0.5 hover:shadow-[0_14px_30px_-12px_rgb(255_70_85/0.45)]`}
               >
                 <span
                   className={`relative grid h-14 w-14 shrink-0 place-items-center rounded-xl transition ${

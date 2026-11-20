@@ -1,4 +1,724 @@
 {
+  "/img/abilities/astra-C.webp": {
+    "src": "https://media.valorant-api.com/agents/41fb69c1-4189-7b37-f117-bcaf1e96f1bf/abilities/grenade/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/astra-E.webp": {
+    "src": "https://media.valorant-api.com/agents/41fb69c1-4189-7b37-f117-bcaf1e96f1bf/abilities/ability2/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/astra-Q.webp": {
+    "src": "https://media.valorant-api.com/agents/41fb69c1-4189-7b37-f117-bcaf1e96f1bf/abilities/ability1/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/astra-X.webp": {
+    "src": "https://media.valorant-api.com/agents/41fb69c1-4189-7b37-f117-bcaf1e96f1bf/abilities/ultimate/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/breach-C.webp": {
+    "src": "https://media.valorant-api.com/agents/5f8d3a7f-467b-97f3-062c-13acf203c006/abilities/grenade/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/breach-E.webp": {
+    "src": "https://media.valorant-api.com/agents/5f8d3a7f-467b-97f3-062c-13acf203c006/abilities/ability2/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/breach-Q.webp": {
+    "src": "https://media.valorant-api.com/agents/5f8d3a7f-467b-97f3-062c-13acf203c006/abilities/ability1/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/breach-X.webp": {
+    "src": "https://media.valorant-api.com/agents/5f8d3a7f-467b-97f3-062c-13acf203c006/abilities/ultimate/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/brimstone-C.webp": {
+    "src": "https://media.valorant-api.com/agents/9f0d8ba9-4140-b941-57d3-a7ad57c6b417/abilities/grenade/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/brimstone-E.webp": {
+    "src": "https://media.valorant-api.com/agents/9f0d8ba9-4140-b941-57d3-a7ad57c6b417/abilities/ability2/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/brimstone-Q.webp": {
+    "src": "https://media.valorant-api.com/agents/9f0d8ba9-4140-b941-57d3-a7ad57c6b417/abilities/ability1/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/brimstone-X.webp": {
+    "src": "https://media.valorant-api.com/agents/9f0d8ba9-4140-b941-57d3-a7ad57c6b417/abilities/ultimate/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/chamber-C.webp": {
+    "src": "https://media.valorant-api.com/agents/22697a3d-45bf-8dd7-4fec-84a9e28c69d7/abilities/grenade/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/chamber-E.webp": {
+    "src": "https://media.valorant-api.com/agents/22697a3d-45bf-8dd7-4fec-84a9e28c69d7/abilities/ability2/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/chamber-Q.webp": {
+    "src": "https://media.valorant-api.com/agents/22697a3d-45bf-8dd7-4fec-84a9e28c69d7/abilities/ability1/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/chamber-X.webp": {
+    "src": "https://media.valorant-api.com/agents/22697a3d-45bf-8dd7-4fec-84a9e28c69d7/abilities/ultimate/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/clove-C.webp": {
+    "src": "https://media.valorant-api.com/agents/1dbf2edd-4729-0984-3115-daa5eed44993/abilities/grenade/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/clove-E.webp": {
+    "src": "https://media.valorant-api.com/agents/1dbf2edd-4729-0984-3115-daa5eed44993/abilities/ability2/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/clove-Q.webp": {
+    "src": "https://media.valorant-api.com/agents/1dbf2edd-4729-0984-3115-daa5eed44993/abilities/ability1/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/clove-X.webp": {
+    "src": "https://media.valorant-api.com/agents/1dbf2edd-4729-0984-3115-daa5eed44993/abilities/ultimate/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/cypher-C.webp": {
+    "src": "https://media.valorant-api.com/agents/117ed9e3-49f3-6512-3ccf-0cada7e3823b/abilities/grenade/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/cypher-E.webp": {
+    "src": "https://media.valorant-api.com/agents/117ed9e3-49f3-6512-3ccf-0cada7e3823b/abilities/ability2/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/cypher-Q.webp": {
+    "src": "https://media.valorant-api.com/agents/117ed9e3-49f3-6512-3ccf-0cada7e3823b/abilities/ability1/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/cypher-X.webp": {
+    "src": "https://media.valorant-api.com/agents/117ed9e3-49f3-6512-3ccf-0cada7e3823b/abilities/ultimate/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/deadlock-C.webp": {
+    "src": "https://media.valorant-api.com/agents/cc8b64c8-4b25-4ff9-6e7f-37b4da43d235/abilities/grenade/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/deadlock-E.webp": {
+    "src": "https://media.valorant-api.com/agents/cc8b64c8-4b25-4ff9-6e7f-37b4da43d235/abilities/ability2/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/deadlock-Q.webp": {
+    "src": "https://media.valorant-api.com/agents/cc8b64c8-4b25-4ff9-6e7f-37b4da43d235/abilities/ability1/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/deadlock-X.webp": {
+    "src": "https://media.valorant-api.com/agents/cc8b64c8-4b25-4ff9-6e7f-37b4da43d235/abilities/ultimate/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/fade-C.webp": {
+    "src": "https://media.valorant-api.com/agents/dade69b4-4f5a-8528-247b-219e5a1facd6/abilities/grenade/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/fade-E.webp": {
+    "src": "https://media.valorant-api.com/agents/dade69b4-4f5a-8528-247b-219e5a1facd6/abilities/ability2/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/fade-Q.webp": {
+    "src": "https://media.valorant-api.com/agents/dade69b4-4f5a-8528-247b-219e5a1facd6/abilities/ability1/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/fade-X.webp": {
+    "src": "https://media.valorant-api.com/agents/dade69b4-4f5a-8528-247b-219e5a1facd6/abilities/ultimate/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/gekko-C.webp": {
+    "src": "https://media.valorant-api.com/agents/e370fa57-4757-3604-3648-499e1f642d3f/abilities/grenade/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/gekko-E.webp": {
+    "src": "https://media.valorant-api.com/agents/e370fa57-4757-3604-3648-499e1f642d3f/abilities/ability2/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/gekko-Q.webp": {
+    "src": "https://media.valorant-api.com/agents/e370fa57-4757-3604-3648-499e1f642d3f/abilities/ability1/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/gekko-X.webp": {
+    "src": "https://media.valorant-api.com/agents/e370fa57-4757-3604-3648-499e1f642d3f/abilities/ultimate/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/harbor-C.webp": {
+    "src": "https://media.valorant-api.com/agents/95b78ed7-4637-86d9-7e41-71ba8c293152/abilities/grenade/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/harbor-E.webp": {
+    "src": "https://media.valorant-api.com/agents/95b78ed7-4637-86d9-7e41-71ba8c293152/abilities/ability2/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/harbor-Q.webp": {
+    "src": "https://media.valorant-api.com/agents/95b78ed7-4637-86d9-7e41-71ba8c293152/abilities/ability1/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/harbor-X.webp": {
+    "src": "https://media.valorant-api.com/agents/95b78ed7-4637-86d9-7e41-71ba8c293152/abilities/ultimate/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/hush-C.webp": {
+    "src": "https://media.valorant-api.com/agents/ddd5a15c-4fbe-42fa-3789-11a55ca5ee04/abilities/grenade/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/hush-E.webp": {
+    "src": "https://media.valorant-api.com/agents/ddd5a15c-4fbe-42fa-3789-11a55ca5ee04/abilities/ability2/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/hush-Q.webp": {
+    "src": "https://media.valorant-api.com/agents/ddd5a15c-4fbe-42fa-3789-11a55ca5ee04/abilities/ability1/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/hush-X.webp": {
+    "src": "https://media.valorant-api.com/agents/ddd5a15c-4fbe-42fa-3789-11a55ca5ee04/abilities/ultimate/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/iso-C.webp": {
+    "src": "https://media.valorant-api.com/agents/0e38b510-41a8-5780-5e8f-568b2a4f2d6c/abilities/grenade/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/iso-E.webp": {
+    "src": "https://media.valorant-api.com/agents/0e38b510-41a8-5780-5e8f-568b2a4f2d6c/abilities/ability2/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/iso-Q.webp": {
+    "src": "https://media.valorant-api.com/agents/0e38b510-41a8-5780-5e8f-568b2a4f2d6c/abilities/ability1/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/iso-X.webp": {
+    "src": "https://media.valorant-api.com/agents/0e38b510-41a8-5780-5e8f-568b2a4f2d6c/abilities/ultimate/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/jett-C.webp": {
+    "src": "https://media.valorant-api.com/agents/add6443a-41bd-e414-f6ad-e58d267f4e95/abilities/grenade/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/jett-E.webp": {
+    "src": "https://media.valorant-api.com/agents/add6443a-41bd-e414-f6ad-e58d267f4e95/abilities/ability2/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/jett-Q.webp": {
+    "src": "https://media.valorant-api.com/agents/add6443a-41bd-e414-f6ad-e58d267f4e95/abilities/ability1/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/jett-X.webp": {
+    "src": "https://media.valorant-api.com/agents/add6443a-41bd-e414-f6ad-e58d267f4e95/abilities/ultimate/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/kayo-C.webp": {
+    "src": "https://media.valorant-api.com/agents/601dbbe7-43ce-be57-2a40-4abd24953621/abilities/grenade/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/kayo-E.webp": {
+    "src": "https://media.valorant-api.com/agents/601dbbe7-43ce-be57-2a40-4abd24953621/abilities/ability2/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/kayo-Q.webp": {
+    "src": "https://media.valorant-api.com/agents/601dbbe7-43ce-be57-2a40-4abd24953621/abilities/ability1/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/kayo-X.webp": {
+    "src": "https://media.valorant-api.com/agents/601dbbe7-43ce-be57-2a40-4abd24953621/abilities/ultimate/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/killjoy-C.webp": {
+    "src": "https://media.valorant-api.com/agents/1e58de9c-4950-5125-93e9-a0aee9f98746/abilities/grenade/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/killjoy-E.webp": {
+    "src": "https://media.valorant-api.com/agents/1e58de9c-4950-5125-93e9-a0aee9f98746/abilities/ability2/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/killjoy-Q.webp": {
+    "src": "https://media.valorant-api.com/agents/1e58de9c-4950-5125-93e9-a0aee9f98746/abilities/ability1/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/killjoy-X.webp": {
+    "src": "https://media.valorant-api.com/agents/1e58de9c-4950-5125-93e9-a0aee9f98746/abilities/ultimate/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/miks-C.webp": {
+    "src": "https://media.valorant-api.com/agents/7c8a4701-4de6-9355-b254-e09bc2a34b72/abilities/grenade/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/miks-E.webp": {
+    "src": "https://media.valorant-api.com/agents/7c8a4701-4de6-9355-b254-e09bc2a34b72/abilities/ability2/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/miks-Q.webp": {
+    "src": "https://media.valorant-api.com/agents/7c8a4701-4de6-9355-b254-e09bc2a34b72/abilities/ability1/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/miks-X.webp": {
+    "src": "https://media.valorant-api.com/agents/7c8a4701-4de6-9355-b254-e09bc2a34b72/abilities/ultimate/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/neon-C.webp": {
+    "src": "https://media.valorant-api.com/agents/bb2a4828-46eb-8cd1-e765-15848195d751/abilities/grenade/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/neon-E.webp": {
+    "src": "https://media.valorant-api.com/agents/bb2a4828-46eb-8cd1-e765-15848195d751/abilities/ability2/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/neon-Q.webp": {
+    "src": "https://media.valorant-api.com/agents/bb2a4828-46eb-8cd1-e765-15848195d751/abilities/ability1/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/neon-X.webp": {
+    "src": "https://media.valorant-api.com/agents/bb2a4828-46eb-8cd1-e765-15848195d751/abilities/ultimate/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/omen-C.webp": {
+    "src": "https://media.valorant-api.com/agents/8e253930-4c05-31dd-1b6c-968525494517/abilities/grenade/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/omen-E.webp": {
+    "src": "https://media.valorant-api.com/agents/8e253930-4c05-31dd-1b6c-968525494517/abilities/ability2/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/omen-Q.webp": {
+    "src": "https://media.valorant-api.com/agents/8e253930-4c05-31dd-1b6c-968525494517/abilities/ability1/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/omen-X.webp": {
+    "src": "https://media.valorant-api.com/agents/8e253930-4c05-31dd-1b6c-968525494517/abilities/ultimate/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/phoenix-C.webp": {
+    "src": "https://media.valorant-api.com/agents/eb93336a-449b-9c1b-0a54-a891f7921d69/abilities/grenade/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/phoenix-E.webp": {
+    "src": "https://media.valorant-api.com/agents/eb93336a-449b-9c1b-0a54-a891f7921d69/abilities/ability2/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/phoenix-Q.webp": {
+    "src": "https://media.valorant-api.com/agents/eb93336a-449b-9c1b-0a54-a891f7921d69/abilities/ability1/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/phoenix-X.webp": {
+    "src": "https://media.valorant-api.com/agents/eb93336a-449b-9c1b-0a54-a891f7921d69/abilities/ultimate/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/raze-C.webp": {
+    "src": "https://media.valorant-api.com/agents/f94c3b30-42be-e959-889c-5aa313dba261/abilities/grenade/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/raze-E.webp": {
+    "src": "https://media.valorant-api.com/agents/f94c3b30-42be-e959-889c-5aa313dba261/abilities/ability2/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/raze-Q.webp": {
+    "src": "https://media.valorant-api.com/agents/f94c3b30-42be-e959-889c-5aa313dba261/abilities/ability1/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/raze-X.webp": {
+    "src": "https://media.valorant-api.com/agents/f94c3b30-42be-e959-889c-5aa313dba261/abilities/ultimate/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/reyna-C.webp": {
+    "src": "https://media.valorant-api.com/agents/a3bfb853-43b2-7238-a4f1-ad90e9e46bcc/abilities/grenade/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/reyna-E.webp": {
+    "src": "https://media.valorant-api.com/agents/a3bfb853-43b2-7238-a4f1-ad90e9e46bcc/abilities/ability2/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/reyna-Q.webp": {
+    "src": "https://media.valorant-api.com/agents/a3bfb853-43b2-7238-a4f1-ad90e9e46bcc/abilities/ability1/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/reyna-X.webp": {
+    "src": "https://media.valorant-api.com/agents/a3bfb853-43b2-7238-a4f1-ad90e9e46bcc/abilities/ultimate/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/sage-C.webp": {
+    "src": "https://media.valorant-api.com/agents/569fdd95-4d10-43ab-ca70-79becc718b46/abilities/grenade/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/sage-E.webp": {
+    "src": "https://media.valorant-api.com/agents/569fdd95-4d10-43ab-ca70-79becc718b46/abilities/ability2/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/sage-Q.webp": {
+    "src": "https://media.valorant-api.com/agents/569fdd95-4d10-43ab-ca70-79becc718b46/abilities/ability1/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/sage-X.webp": {
+    "src": "https://media.valorant-api.com/agents/569fdd95-4d10-43ab-ca70-79becc718b46/abilities/ultimate/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/skye-C.webp": {
+    "src": "https://media.valorant-api.com/agents/6f2a04ca-43e0-be17-7f36-b3908627744d/abilities/grenade/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/skye-E.webp": {
+    "src": "https://media.valorant-api.com/agents/6f2a04ca-43e0-be17-7f36-b3908627744d/abilities/ability2/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/skye-Q.webp": {
+    "src": "https://media.valorant-api.com/agents/6f2a04ca-43e0-be17-7f36-b3908627744d/abilities/ability1/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/skye-X.webp": {
+    "src": "https://media.valorant-api.com/agents/6f2a04ca-43e0-be17-7f36-b3908627744d/abilities/ultimate/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/sova-C.webp": {
+    "src": "https://media.valorant-api.com/agents/320b2a48-4d9b-a075-30f1-1f93a9b638fa/abilities/grenade/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/sova-E.webp": {
+    "src": "https://media.valorant-api.com/agents/320b2a48-4d9b-a075-30f1-1f93a9b638fa/abilities/ability2/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/sova-Q.webp": {
+    "src": "https://media.valorant-api.com/agents/320b2a48-4d9b-a075-30f1-1f93a9b638fa/abilities/ability1/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/sova-X.webp": {
+    "src": "https://media.valorant-api.com/agents/320b2a48-4d9b-a075-30f1-1f93a9b638fa/abilities/ultimate/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/tejo-C.webp": {
+    "src": "https://media.valorant-api.com/agents/b444168c-4e35-8076-db47-ef9bf368f384/abilities/grenade/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/tejo-E.webp": {
+    "src": "https://media.valorant-api.com/agents/b444168c-4e35-8076-db47-ef9bf368f384/abilities/ability2/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/tejo-Q.webp": {
+    "src": "https://media.valorant-api.com/agents/b444168c-4e35-8076-db47-ef9bf368f384/abilities/ability1/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/tejo-X.webp": {
+    "src": "https://media.valorant-api.com/agents/b444168c-4e35-8076-db47-ef9bf368f384/abilities/ultimate/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/veto-C.webp": {
+    "src": "https://media.valorant-api.com/agents/92eeef5d-43b5-1d4a-8d03-b3927a09034b/abilities/grenade/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/veto-E.webp": {
+    "src": "https://media.valorant-api.com/agents/92eeef5d-43b5-1d4a-8d03-b3927a09034b/abilities/ability2/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/veto-Q.webp": {
+    "src": "https://media.valorant-api.com/agents/92eeef5d-43b5-1d4a-8d03-b3927a09034b/abilities/ability1/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/veto-X.webp": {
+    "src": "https://media.valorant-api.com/agents/92eeef5d-43b5-1d4a-8d03-b3927a09034b/abilities/ultimate/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/viper-C.webp": {
+    "src": "https://media.valorant-api.com/agents/707eab51-4836-f488-046a-cda6bf494859/abilities/grenade/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/viper-E.webp": {
+    "src": "https://media.valorant-api.com/agents/707eab51-4836-f488-046a-cda6bf494859/abilities/ability2/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/viper-Q.webp": {
+    "src": "https://media.valorant-api.com/agents/707eab51-4836-f488-046a-cda6bf494859/abilities/ability1/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/viper-X.webp": {
+    "src": "https://media.valorant-api.com/agents/707eab51-4836-f488-046a-cda6bf494859/abilities/ultimate/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/vyse-C.webp": {
+    "src": "https://media.valorant-api.com/agents/efba5359-4016-a1e5-7626-b1ae76895940/abilities/grenade/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/vyse-E.webp": {
+    "src": "https://media.valorant-api.com/agents/efba5359-4016-a1e5-7626-b1ae76895940/abilities/ability2/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/vyse-Q.webp": {
+    "src": "https://media.valorant-api.com/agents/efba5359-4016-a1e5-7626-b1ae76895940/abilities/ability1/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/vyse-X.webp": {
+    "src": "https://media.valorant-api.com/agents/efba5359-4016-a1e5-7626-b1ae76895940/abilities/ultimate/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/waylay-C.webp": {
+    "src": "https://media.valorant-api.com/agents/df1cb487-4902-002e-5c17-d28e83e78588/abilities/grenade/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/waylay-E.webp": {
+    "src": "https://media.valorant-api.com/agents/df1cb487-4902-002e-5c17-d28e83e78588/abilities/ability2/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/waylay-Q.webp": {
+    "src": "https://media.valorant-api.com/agents/df1cb487-4902-002e-5c17-d28e83e78588/abilities/ability1/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/waylay-X.webp": {
+    "src": "https://media.valorant-api.com/agents/df1cb487-4902-002e-5c17-d28e83e78588/abilities/ultimate/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/yoru-C.webp": {
+    "src": "https://media.valorant-api.com/agents/7f94d92c-4234-0a36-9646-3a87eb8b5c89/abilities/grenade/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/yoru-E.webp": {
+    "src": "https://media.valorant-api.com/agents/7f94d92c-4234-0a36-9646-3a87eb8b5c89/abilities/ability2/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/yoru-Q.webp": {
+    "src": "https://media.valorant-api.com/agents/7f94d92c-4234-0a36-9646-3a87eb8b5c89/abilities/ability1/displayicon.png",
+    "v": 1
+  },
+  "/img/abilities/yoru-X.webp": {
+    "src": "https://media.valorant-api.com/agents/7f94d92c-4234-0a36-9646-3a87eb8b5c89/abilities/ultimate/displayicon.png",
+    "v": 1
+  },
+  "/img/agents/astra.webp": {
+    "src": "https://media.valorant-api.com/agents/41fb69c1-4189-7b37-f117-bcaf1e96f1bf/displayicon.png",
+    "v": 1
+  },
+  "/img/agents/breach.webp": {
+    "src": "https://media.valorant-api.com/agents/5f8d3a7f-467b-97f3-062c-13acf203c006/displayicon.png",
+    "v": 1
+  },
+  "/img/agents/brimstone.webp": {
+    "src": "https://media.valorant-api.com/agents/9f0d8ba9-4140-b941-57d3-a7ad57c6b417/displayicon.png",
+    "v": 1
+  },
+  "/img/agents/chamber.webp": {
+    "src": "https://media.valorant-api.com/agents/22697a3d-45bf-8dd7-4fec-84a9e28c69d7/displayicon.png",
+    "v": 1
+  },
+  "/img/agents/clove.webp": {
+    "src": "https://media.valorant-api.com/agents/1dbf2edd-4729-0984-3115-daa5eed44993/displayicon.png",
+    "v": 1
+  },
+  "/img/agents/cypher.webp": {
+    "src": "https://media.valorant-api.com/agents/117ed9e3-49f3-6512-3ccf-0cada7e3823b/displayicon.png",
+    "v": 1
+  },
+  "/img/agents/deadlock.webp": {
+    "src": "https://media.valorant-api.com/agents/cc8b64c8-4b25-4ff9-6e7f-37b4da43d235/displayicon.png",
+    "v": 1
+  },
+  "/img/agents/fade.webp": {
+    "src": "https://media.valorant-api.com/agents/dade69b4-4f5a-8528-247b-219e5a1facd6/displayicon.png",
+    "v": 1
+  },
+  "/img/agents/gekko.webp": {
+    "src": "https://media.valorant-api.com/agents/e370fa57-4757-3604-3648-499e1f642d3f/displayicon.png",
+    "v": 1
+  },
+  "/img/agents/harbor.webp": {
+    "src": "https://media.valorant-api.com/agents/95b78ed7-4637-86d9-7e41-71ba8c293152/displayicon.png",
+    "v": 1
+  },
+  "/img/agents/hush.webp": {
+    "src": "https://media.valorant-api.com/agents/ddd5a15c-4fbe-42fa-3789-11a55ca5ee04/displayicon.png",
+    "v": 1
+  },
+  "/img/agents/iso.webp": {
+    "src": "https://media.valorant-api.com/agents/0e38b510-41a8-5780-5e8f-568b2a4f2d6c/displayicon.png",
+    "v": 1
+  },
+  "/img/agents/jett.webp": {
+    "src": "https://media.valorant-api.com/agents/add6443a-41bd-e414-f6ad-e58d267f4e95/displayicon.png",
+    "v": 1
+  },
+  "/img/agents/kayo.webp": {
+    "src": "https://media.valorant-api.com/agents/601dbbe7-43ce-be57-2a40-4abd24953621/displayicon.png",
+    "v": 1
+  },
+  "/img/agents/killjoy.webp": {
+    "src": "https://media.valorant-api.com/agents/1e58de9c-4950-5125-93e9-a0aee9f98746/displayicon.png",
+    "v": 1
+  },
+  "/img/agents/miks.webp": {
+    "src": "https://media.valorant-api.com/agents/7c8a4701-4de6-9355-b254-e09bc2a34b72/displayicon.png",
+    "v": 1
+  },
+  "/img/agents/neon.webp": {
+    "src": "https://media.valorant-api.com/agents/bb2a4828-46eb-8cd1-e765-15848195d751/displayicon.png",
+    "v": 1
+  },
+  "/img/agents/omen.webp": {
+    "src": "https://media.valorant-api.com/agents/8e253930-4c05-31dd-1b6c-968525494517/displayicon.png",
+    "v": 1
+  },
+  "/img/agents/phoenix.webp": {
+    "src": "https://media.valorant-api.com/agents/eb93336a-449b-9c1b-0a54-a891f7921d69/displayicon.png",
+    "v": 1
+  },
+  "/img/agents/raze.webp": {
+    "src": "https://media.valorant-api.com/agents/f94c3b30-42be-e959-889c-5aa313dba261/displayicon.png",
+    "v": 1
+  },
+  "/img/agents/reyna.webp": {
+    "src": "https://media.valorant-api.com/agents/a3bfb853-43b2-7238-a4f1-ad90e9e46bcc/displayicon.png",
+    "v": 1
+  },
+  "/img/agents/sage.webp": {
+    "src": "https://media.valorant-api.com/agents/569fdd95-4d10-43ab-ca70-79becc718b46/displayicon.png",
+    "v": 1
+  },
+  "/img/agents/skye.webp": {
+    "src": "https://media.valorant-api.com/agents/6f2a04ca-43e0-be17-7f36-b3908627744d/displayicon.png",
+    "v": 1
+  },
+  "/img/agents/sova.webp": {
+    "src": "https://media.valorant-api.com/agents/320b2a48-4d9b-a075-30f1-1f93a9b638fa/displayicon.png",
+    "v": 1
+  },
+  "/img/agents/tejo.webp": {
+    "src": "https://media.valorant-api.com/agents/b444168c-4e35-8076-db47-ef9bf368f384/displayicon.png",
+    "v": 1
+  },
+  "/img/agents/veto.webp": {
+    "src": "https://media.valorant-api.com/agents/92eeef5d-43b5-1d4a-8d03-b3927a09034b/displayicon.png",
+    "v": 1
+  },
+  "/img/agents/viper.webp": {
+    "src": "https://media.valorant-api.com/agents/707eab51-4836-f488-046a-cda6bf494859/displayicon.png",
+    "v": 1
+  },
+  "/img/agents/vyse.webp": {
+    "src": "https://media.valorant-api.com/agents/efba5359-4016-a1e5-7626-b1ae76895940/displayicon.png",
+    "v": 1
+  },
+  "/img/agents/waylay.webp": {
+    "src": "https://media.valorant-api.com/agents/df1cb487-4902-002e-5c17-d28e83e78588/displayicon.png",
+    "v": 1
+  },
+  "/img/agents/yoru.webp": {
+    "src": "https://media.valorant-api.com/agents/7f94d92c-4234-0a36-9646-3a87eb8b5c89/displayicon.png",
+    "v": 1
+  },
+  "/img/mapthumbs/abyss.webp": {
+    "src": "https://media.valorant-api.com/maps/224b0a95-48b9-f703-1bd8-67aca101a61f/listviewicon.png",
+    "v": 1
+  },
+  "/img/mapthumbs/ascent.webp": {
+    "src": "https://media.valorant-api.com/maps/7eaecc1b-4337-bbf6-6ab9-04b8f06b3319/listviewicon.png",
+    "v": 1
+  },
+  "/img/mapthumbs/bind.webp": {
+    "src": "https://media.valorant-api.com/maps/2c9d57ec-4431-9c5e-2939-8f9ef6dd5cba/listviewicon.png",
+    "v": 1
+  },
+  "/img/mapthumbs/breeze.webp": {
+    "src": "https://media.valorant-api.com/maps/2fb9a4fd-47b8-4e7d-a969-74b4046ebd53/listviewicon.png",
+    "v": 1
+  },
+  "/img/mapthumbs/corrode.webp": {
+    "src": "https://media.valorant-api.com/maps/1c18ab1f-420d-0d8b-71d0-77ad3c439115/listviewicon.png",
+    "v": 1
+  },
+  "/img/mapthumbs/fracture.webp": {
+    "src": "https://media.valorant-api.com/maps/b529448b-4d60-346e-e89e-00a4c527a405/listviewicon.png",
+    "v": 1
+  },
+  "/img/mapthumbs/haven.webp": {
+    "src": "https://media.valorant-api.com/maps/2bee0dc9-4ffe-519b-1cbd-7fbe763a6047/listviewicon.png",
+    "v": 1
+  },
+  "/img/mapthumbs/icebox.webp": {
+    "src": "https://media.valorant-api.com/maps/e2ad5c54-4114-a870-9641-8ea21279579a/listviewicon.png",
+    "v": 1
+  },
+  "/img/mapthumbs/lotus.webp": {
+    "src": "https://media.valorant-api.com/maps/2fe4ed3a-450a-948b-6d6b-e89a78e680a9/listviewicon.png",
+    "v": 1
+  },
+  "/img/mapthumbs/pearl.webp": {
+    "src": "https://media.valorant-api.com/maps/fd267378-4d1d-484f-ff52-77821ed10dc2/listviewicon.png",
+    "v": 1
+  },
+  "/img/mapthumbs/split.webp": {
+    "src": "https://media.valorant-api.com/maps/d960549e-485c-e861-8d71-aa9d1aed12a2/listviewicon.png",
+    "v": 1
+  },
+  "/img/mapthumbs/summit.webp": {
+    "src": "https://media.valorant-api.com/maps/756da597-416b-c0f2-f47b-afbdf28670bc/listviewicon.png",
+    "v": 1
+  },
+  "/img/mapthumbs/sunset.webp": {
+    "src": "https://media.valorant-api.com/maps/92584fbe-486a-b1b2-9faa-39b0f486b498/listviewicon.png",
+    "v": 1
+  },
+  "/img/minimaps/abyss.webp": {
+    "src": "https://media.valorant-api.com/maps/224b0a95-48b9-f703-1bd8-67aca101a61f/displayicon.png",
+    "v": 2
+  },
+  "/img/minimaps/ascent.webp": {
+    "src": "https://media.valorant-api.com/maps/7eaecc1b-4337-bbf6-6ab9-04b8f06b3319/displayicon.png",
+    "v": 2
+  },
+  "/img/minimaps/bind.webp": {
+    "src": "https://media.valorant-api.com/maps/2c9d57ec-4431-9c5e-2939-8f9ef6dd5cba/displayicon.png",
+    "v": 2
+  },
+  "/img/minimaps/breeze.webp": {
+    "src": "https://media.valorant-api.com/maps/2fb9a4fd-47b8-4e7d-a969-74b4046ebd53/displayicon.png",
+    "v": 2
+  },
+  "/img/minimaps/corrode.webp": {
+    "src": "https://media.valorant-api.com/maps/1c18ab1f-420d-0d8b-71d0-77ad3c439115/displayicon.png",
+    "v": 2
+  },
+  "/img/minimaps/fracture.webp": {
+    "src": "https://media.valorant-api.com/maps/b529448b-4d60-346e-e89e-00a4c527a405/displayicon.png",
+    "v": 2
+  },
+  "/img/minimaps/haven.webp": {
+    "src": "https://media.valorant-api.com/maps/2bee0dc9-4ffe-519b-1cbd-7fbe763a6047/displayicon.png",
+    "v": 2
+  },
+  "/img/minimaps/icebox.webp": {
+    "src": "https://media.valorant-api.com/maps/e2ad5c54-4114-a870-9641-8ea21279579a/displayicon.png",
+    "v": 2
+  },
+  "/img/minimaps/lotus.webp": {
+    "src": "https://media.valorant-api.com/maps/2fe4ed3a-450a-948b-6d6b-e89a78e680a9/displayicon.png",
+    "v": 2
+  },
+  "/img/minimaps/pearl.webp": {
+    "src": "https://media.valorant-api.com/maps/fd267378-4d1d-484f-ff52-77821ed10dc2/displayicon.png",
+    "v": 2
+  },
+  "/img/minimaps/split.webp": {
+    "src": "https://media.valorant-api.com/maps/d960549e-485c-e861-8d71-aa9d1aed12a2/displayicon.png",
+    "v": 2
+  },
+  "/img/minimaps/summit.webp": {
+    "src": "https://media.valorant-api.com/maps/756da597-416b-c0f2-f47b-afbdf28670bc/displayicon.png",
+    "v": 2
+  },
+  "/img/minimaps/sunset.webp": {
+    "src": "https://media.valorant-api.com/maps/92584fbe-486a-b1b2-9faa-39b0f486b498/displayicon.png",
+    "v": 2
+  },
+  "/img/roles/controller.webp": {
+    "src": "https://media.valorant-api.com/agents/roles/4ee40330-ecdd-4f2f-98a8-eb1243428373/displayicon.png",
+    "v": 1
+  },
+  "/img/roles/duelist.webp": {
+    "src": "https://media.valorant-api.com/agents/roles/dbe8757e-9e92-4ed4-b39f-9dfc589691d4/displayicon.png",
+    "v": 1
+  },
+  "/img/roles/initiator.webp": {
+    "src": "https://media.valorant-api.com/agents/roles/1b47567f-8f7b-444b-aae3-b0c634622d10/displayicon.png",
+    "v": 1
+  },
+  "/img/roles/sentinel.webp": {
+    "src": "https://media.valorant-api.com/agents/roles/5fc02f99-4091-4486-a531-98459a3e95e9/displayicon.png",
+    "v": 1
+  },
   "/img/skins/000ad7b1-44b0-9345-ea47-9cbd7dcdbb38.webp": {
     "src": "https://media.valorant-api.com/weaponskins/000ad7b1-44b0-9345-ea47-9cbd7dcdbb38/displayicon.png",
     "v": 2
@@ -6918,5 +7638,25 @@
   "/img/thumbs/ffb2f24f-43bd-8735-f9bd-36bde08d86cb.webp": {
     "src": "https://media.valorant-api.com/weaponskins/ffb2f24f-43bd-8735-f9bd-36bde08d86cb/displayicon.png",
     "v": 2
+  },
+  "/img/tiers/deluxe.webp": {
+    "src": "https://media.valorant-api.com/contenttiers/0cebb8be-46d7-c12a-d306-e9907bfc5a25/displayicon.png",
+    "v": 1
+  },
+  "/img/tiers/exclusive.webp": {
+    "src": "https://media.valorant-api.com/contenttiers/e046854e-406c-37f4-6607-19a9ba8426fc/displayicon.png",
+    "v": 1
+  },
+  "/img/tiers/premium.webp": {
+    "src": "https://media.valorant-api.com/contenttiers/60bca009-4182-7998-dee7-b8a2558dc369/displayicon.png",
+    "v": 1
+  },
+  "/img/tiers/select.webp": {
+    "src": "https://media.valorant-api.com/contenttiers/12683d76-48d7-84a3-4e09-6985794f0445/displayicon.png",
+    "v": 1
+  },
+  "/img/tiers/ultra.webp": {
+    "src": "https://media.valorant-api.com/contenttiers/411e4a55-4e59-7757-41f0-86a53f101bb5/displayicon.png",
+    "v": 1
   }
 }

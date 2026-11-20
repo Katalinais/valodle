@@ -4,3 +4,4 @@ node_modules
 src/data/generated
 playwright-report
 test-results
+tests/fixtures

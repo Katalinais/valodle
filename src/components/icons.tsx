@@ -111,12 +111,20 @@ export const ShareIcon = ({ className }: P) => (
   </svg>
 );
 
+export const MapIcon = ({ className }: P) => (
+  <svg {...base} className={className}>
+    <path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2z" />
+    <path d="M9 4v14M15 6v14" />
+  </svg>
+);
+
 const MODE_ICONS: Record<ModeId, (p: P) => React.JSX.Element> = {
   classic: CrosshairIcon,
   ability: AbilityIcon,
   quote: QuoteIcon,
   emoji: EmojiIcon,
   skin: SkinIcon,
+  map: MapIcon,
 };
 
 export function ModeIcon({ mode, className }: { mode: ModeId; className?: string }) {

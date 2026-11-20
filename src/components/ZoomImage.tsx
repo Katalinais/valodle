@@ -9,18 +9,33 @@ type Props = {
   poi: { x: number; y: number };
   zoom: number;
   grayscale?: boolean;
+  /** Muestra solo la forma (píxeles opacos en un color plano). */
+  silhouette?: boolean;
   testId?: string;
+  /** ancho/alto del visor (2 para skins, 16/9 para mapas) */
+  containerAspect?: number;
 };
 
 /** Imagen ampliada alrededor de un punto de interés dentro de un visor con overflow oculto. */
-export function ZoomImage({ src, alt, aspect, poi, zoom, grayscale, testId }: Props) {
-  const l = zoomLayout(poi, zoom, aspect);
+export function ZoomImage({
+  src,
+  alt,
+  aspect,
+  poi,
+  zoom,
+  grayscale,
+  silhouette,
+  testId,
+  containerAspect = CONTAINER_ASPECT,
+}: Props) {
+  const l = zoomLayout(poi, zoom, aspect, containerAspect);
   return (
     <div
       className="panel corners relative w-full overflow-hidden bg-[radial-gradient(circle,_#2a3948_0%,_#0f1923_80%)]"
-      style={{ aspectRatio: String(CONTAINER_ASPECT) }}
+      style={{ aspectRatio: String(containerAspect) }}
       data-testid={testId}
       data-zoom={zoom}
+      data-silhouette={silhouette ? "true" : "false"}
     >
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
@@ -33,7 +48,11 @@ export function ZoomImage({ src, alt, aspect, poi, zoom, grayscale, testId }: Pr
           height: `${l.height * 100}%`,
           left: `${l.left * 100}%`,
           top: `${l.top * 100}%`,
-          filter: grayscale ? "grayscale(1)" : undefined,
+          filter: silhouette
+            ? "brightness(0) invert(0.9) drop-shadow(0 0 6px rgb(255 70 85 / 0.55))"
+            : grayscale
+              ? "grayscale(1)"
+              : undefined,
         }}
       />
       {/* Retícula decorativa */}

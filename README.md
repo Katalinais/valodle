@@ -1,6 +1,6 @@
 # Valorantdle
 
-Juego diario de adivinanzas de fans sobre VALORANT. Hay cinco modos (**Clásico, Habilidad, Frase, Emoji y Skin**) y un reto nuevo cada día, igual para todos los jugadores. El reto se reinicia a medianoche en `America/Bogota`.
+Juego diario de adivinanzas de fans sobre VALORANT. Hay seis modos (**Clásico, Habilidad, Frase, Emoji, Skin y Mapa**) y un reto nuevo cada día, igual para todos los jugadores. El reto se reinicia a medianoche en `America/Bogota`.
 
 Es un sitio 100 % estático (Next.js con `output: "export"`): no tiene backend, y el progreso, las rachas y las estadísticas se guardan en `localStorage`.
 
@@ -36,8 +36,9 @@ El script `scripts/build-data.ts` hace esto:
 2. Mezcla los agentes con los datos manuales de `src/data/manual/` y lo valida todo con Zod.
 3. **Filtra solo las skins de pago**: con tier asignado, sin las _Standard_ ni _Random Favorite_, y **sin las recompensas de contratos** (pases de batalla, contratos de agente y pases de evento). La API ya asigna tier a muchas skins de pase, así que filtrar por tier no basta.
 4. Descarga cada imagen de skin (con caché en `.cache/`) y calcula con `sharp` una máscara de opacidad y el **punto de interés** del zoom.
-5. Actualiza los **registros diarios** (`src/data/generated/registry/*.json`).
-6. Imprime un resumen: skins incluidas y descartadas por motivo, y los `TODO` pendientes.
+5. Descarga los **mapas competitivos** (los que tienen descripción táctica en la API): minimapa y banner, y calcula las **zonas** de la silueta del minimapa que se pueden mostrar (cada día toca una). Hasta que existan, el modo Mapa aparece como "Próximamente".
+6. Actualiza los **registros diarios** (`src/data/generated/registry/*.json`).
+7. Imprime un resumen: skins incluidas y descartadas por motivo, y los `TODO` pendientes.
 
 Revisa el diff y commitea los JSON generados: el build no llama a la API.
 

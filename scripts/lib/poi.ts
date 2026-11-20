@@ -41,3 +41,34 @@ export function computePoi(mask: boolean[][], id: string): { x: number; y: numbe
   const chosen = pool[fnv1a(id) % pool.length];
   return { x: (chosen.sx + size / 2) / grid, y: (chosen.sy + size / 2) / grid };
 }
+
+/**
+ * Zonas jugables de una silueta (p. ej. un minimapa): centros de ventanas a MAX_ZOOM con al
+ * menos `minCoverage` de píxeles opacos, separadas entre sí para que cada día se vea una parte
+ * distinta. Orden determinista (de más a menos cobertura).
+ */
+export function computeZones(
+  mask: boolean[][],
+  { minCoverage = 0.45, max = 8 }: { minCoverage?: number; max?: number } = {},
+): { x: number; y: number }[] {
+  const grid = mask.length;
+  const size = grid / MAX_ZOOM;
+  const windows: { sx: number; sy: number; cov: number }[] = [];
+  for (let sy = 0; sy <= grid - size; sy++)
+    for (let sx = 0; sx <= grid - size; sx++)
+      windows.push({ sx, sy, cov: windowCoverage(mask, sx, sy, size) });
+  windows.sort((a, b) => b.cov - a.cov || a.sy - b.sy || a.sx - b.sx);
+
+  const chosen: typeof windows = [];
+  for (const w of windows) {
+    if (w.cov < minCoverage || chosen.length >= max) break;
+    // Separación mínima: que no compartan más de la mitad del área con una zona ya elegida.
+    const overlaps = chosen.some(
+      (c) => Math.abs(c.sx - w.sx) < size / 2 + 1 && Math.abs(c.sy - w.sy) < size / 2 + 1,
+    );
+    if (!overlaps) chosen.push(w);
+  }
+  // Siempre al menos una zona (la de más cobertura).
+  if (!chosen.length) chosen.push(windows[0]);
+  return chosen.map((w) => ({ x: (w.sx + size / 2) / grid, y: (w.sy + size / 2) / grid }));
+}

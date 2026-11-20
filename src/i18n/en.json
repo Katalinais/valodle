@@ -16,7 +16,8 @@
     "status": {
       "new": "Not played",
       "playing": "In progress",
-      "done": "Completed"
+      "done": "Completed",
+      "soon": "Coming soon"
     },
     "today": "Today's challenge",
     "progress": "{done} of {total} completed",
@@ -48,7 +49,12 @@
       "prompt": "Which skin is this?",
       "desc": "Paid skins only"
     },
-    "label": "Mode {n} of {total}"
+    "label": "Mode {n} of {total}",
+    "map": {
+      "title": "Map",
+      "prompt": "Which map is this silhouette from?",
+      "desc": "Guess from the minimap silhouette"
+    }
   },
   "daily": {
     "challenge": "Challenge #{n}",
@@ -174,5 +180,15 @@
     "disclaimer": "{site} isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games, and all associated properties are trademarks or registered trademarks of Riot Games, Inc.",
     "credits": "Data and images via {api}.",
     "fanProject": "Unofficial, free fan project."
+  },
+  "map": {
+    "coordsHint": "Coordinates: {coords}",
+    "coordsHintIn": "Coordinates hint in {n} attempt(s)",
+    "soonTitle": "Coming soon",
+    "soonText": "We're getting the maps ready. Check back soon!",
+    "alt": "Piece of the minimap silhouette to guess",
+    "placeholder": "Map name…",
+    "colorsHint": "Minimap colors revealed",
+    "colorsHintIn": "Colors in {n} attempt(s)"
   }
 }

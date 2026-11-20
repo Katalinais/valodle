@@ -8,7 +8,7 @@
 import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
-import type { Ability, Agent, Skin, TierInfo } from "../src/data/schema";
+import type { Ability, Agent, GameMap, Skin, TierInfo } from "../src/data/schema";
 import {
   localize,
   mapLimit,
@@ -30,6 +30,7 @@ export async function localizeGenerated() {
   const abilities = await read<Ability[]>("abilities.json");
   const tiers = await read<TierInfo[]>("tiers.json");
   const skins = await read<Skin[]>("skins.json");
+  const maps = await read<GameMap[]>("maps.json");
   const manifest = await readManifest();
   const report: LocalizeReport = { localized: 0, reused: 0, failed: [] };
 
@@ -72,6 +73,20 @@ export async function localizeGenerated() {
       get: () => s.thumb ?? s.image,
       set: (v: string) => (s.thumb = v),
     })),
+    ...maps.map((m) => ({
+      kind: "minimaps" as const,
+      id: m.id,
+      get: () => m.minimap,
+      set: (v: string) => (m.minimap = v),
+    })),
+    ...maps
+      .filter((m) => m.thumb)
+      .map((m) => ({
+        kind: "mapthumbs" as const,
+        id: m.id,
+        get: () => m.thumb!,
+        set: (v: string) => (m.thumb = v),
+      })),
   ];
 
   // Los roles se repiten entre agentes: procesar cada URL una sola vez.
@@ -88,6 +103,7 @@ export async function localizeGenerated() {
     write("abilities.json", abilities),
     write("tiers.json", tiers),
     write("skins.json", skins),
+    write("maps.json", maps),
   ]);
 
   const used = new Set(jobs.map((j) => j.get()).filter((s) => s.startsWith("/img/")));

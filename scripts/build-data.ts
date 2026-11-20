@@ -19,6 +19,8 @@ import {
   QuotesSchema,
   SkinMaskSchema,
   SkinSchema,
+  MapSchema,
+  type GameMap,
   TIERS,
   TODO,
   TierInfoSchema,
@@ -31,7 +33,7 @@ import {
   type TierInfo,
 } from "../src/data/schema";
 import { excludeReason, pickSkinImage, type ExcludeReason, type RawSkin } from "./lib/skins-filter";
-import { MASK_GRID, computePoi } from "./lib/poi";
+import { MASK_GRID, computePoi, computeZones } from "./lib/poi";
 import { CACHE_DIR, loadImage } from "./lib/images";
 import { localizeGenerated } from "./localize-images";
 import { poolIds } from "../src/data/pools";
@@ -182,6 +184,57 @@ async function buildAgents() {
 }
 
 /* ---------------- tiers ---------------- */
+
+/* ---------------- mapas ---------------- */
+
+type RawMap = {
+  uuid: string;
+  displayName: string;
+  tacticalDescription: string | null;
+  coordinates: string | null;
+  displayIcon: string | null;
+  listViewIcon: string | null;
+};
+
+/**
+ * Mapas jugables en competitivo: los que tienen descripción táctica ("A/B/C Sites") y minimapa.
+ * Del minimapa se calcula una máscara de opacidad y, con ella, las zonas jugables del día.
+ */
+async function buildMaps(): Promise<{ maps: GameMap[]; masks: SkinMask[] }> {
+  const [en, es] = await Promise.all([
+    api<RawMap[]>("maps", "en-US"),
+    api<RawMap[]>("maps", "es-MX"),
+  ]);
+  const esById = new Map(es.map((m) => [m.uuid, m]));
+  const unique = [...new Map(en.map((m) => [m.uuid, m])).values()];
+  const playable = unique.filter((m) => m.tacticalDescription && m.displayIcon);
+  const masks: SkinMask[] = [];
+  const maps = await mapLimit(playable, 6, async (m) => {
+    const id = slugify(m.displayName);
+    const { mask, aspect } = await opacityMask(await loadImage(m.displayIcon!));
+    masks.push({
+      id,
+      grid: MASK_GRID,
+      rows: mask.map((r) => r.map((b) => (b ? "1" : "0")).join("")),
+    });
+    const mEs = esById.get(m.uuid);
+    return MapSchema.parse({
+      id,
+      uuid: m.uuid,
+      name: { en: m.displayName, es: mEs?.displayName ?? m.displayName },
+      minimap: m.displayIcon,
+      aspect: Math.round(aspect * 1000) / 1000,
+      zones: computeZones(mask),
+      thumb: m.listViewIcon,
+      coordinates: m.coordinates
+        ? { en: m.coordinates, es: mEs?.coordinates ?? m.coordinates }
+        : null,
+    });
+  });
+  maps.sort((a, b) => a.id.localeCompare(b.id));
+  masks.sort((a, b) => a.id.localeCompare(b.id));
+  return { maps, masks };
+}
 
 async function buildTiers() {
   const raw = await api<RawTier[]>("contenttiers");
@@ -375,17 +428,23 @@ async function main() {
 
   const tiers = await buildTiers();
   const { skins, masks, stats, total } = await buildSkins(tiers);
+  const { maps, masks: mapMasks } = await buildMaps();
 
   await writeJson("agents.json", agents);
   await writeJson("abilities.json", abilities);
   await writeJson("tiers.json", tiers);
   await writeJson("skins.json", skins);
+  await writeJson("maps.json", maps);
   const registryChanges = await updateRegistries(
-    poolIds({ agents, abilities, quotes, emojis, skins }),
+    poolIds({ agents, abilities, quotes, emojis, skins, maps }),
   );
   await writeFile(
     path.join(ROOT, "tests/fixtures/skin-masks.json"),
     JSON.stringify(z.array(SkinMaskSchema).parse(masks)) + "\n",
+  );
+  await writeFile(
+    path.join(ROOT, "tests/fixtures/map-masks.json"),
+    JSON.stringify(z.array(SkinMaskSchema).parse(mapMasks)) + "\n",
   );
 
   // Autoalojar imágenes (public/img) y reescribir las rutas en los JSON generados.
@@ -414,6 +473,9 @@ async function main() {
   console.log(`  · recompensa de contrato/pase:     ${stats.contractReward}`);
   console.log(`  · sin imagen:                      ${stats.noImage}`);
   console.log(`  · duplicadas:                      ${stats.duplicate}`);
+  console.log(
+    `Mapas competitivos: ${maps.length} (${maps.map((m) => `${m.name.en} ${m.zones.length} zonas`).join(", ")})`,
+  );
   console.log(
     `Por tier: ${TIERS.map((t) => `${t} ${skins.filter((s) => s.tier === t).length}`).join(" · ")}`,
   );

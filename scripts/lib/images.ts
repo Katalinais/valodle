@@ -41,7 +41,8 @@ export async function loadImage(url: string): Promise<Buffer> {
   }
 }
 
-export type ImageKind = "agents" | "roles" | "abilities" | "tiers" | "skins" | "thumbs";
+export type ImageKind =
+  "agents" | "roles" | "abilities" | "tiers" | "skins" | "thumbs" | "minimaps" | "mapthumbs";
 
 type Processing = { max: number | null; quality: number; alphaQuality?: number; version: number };
 
@@ -58,6 +59,9 @@ const PROCESSING: Record<ImageKind, Processing> = {
   skins: { max: 2048, quality: 82, version: 2 },
   // Miniaturas para el autocompletado y la lista de intentos (se muestran a ~80 px de ancho).
   thumbs: { max: 192, quality: 70, alphaQuality: 80, version: 2 },
+  // Minimapas: resolución completa (1024 px) para que la silueta se vea nítida a zoom 4x.
+  minimaps: { max: 1024, quality: 85, version: 2 },
+  mapthumbs: { max: 384, quality: 75, version: 1 },
 };
 
 const isRemote = (src: string) => src.startsWith("https://");
@@ -155,6 +159,8 @@ export async function pruneUnused(used: Set<string>) {
         removed++;
       }
     }
+    // No dejar carpetas vacías de tipos de imagen que ya no se usan.
+    if ((await readdir(dir)).length === 0) await rm(dir, { recursive: true });
   }
   return removed;
 }

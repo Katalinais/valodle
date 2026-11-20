@@ -1,0 +1,627 @@
+[
+  {
+    "id": "abyss",
+    "uuid": "224b0a95-48b9-f703-1bd8-67aca101a61f",
+    "name": {
+      "es": "Abyss",
+      "en": "Abyss"
+    },
+    "minimap": "/img/minimaps/abyss.webp",
+    "aspect": 1,
+    "zones": [
+      {
+        "x": 0.75,
+        "y": 0.3125
+      },
+      {
+        "x": 0.375,
+        "y": 0.1875
+      },
+      {
+        "x": 0.375,
+        "y": 0.8125
+      },
+      {
+        "x": 0.5625,
+        "y": 0.8125
+      },
+      {
+        "x": 0.5625,
+        "y": 0.1875
+      },
+      {
+        "x": 0.25,
+        "y": 0.375
+      },
+      {
+        "x": 0.5625,
+        "y": 0.4375
+      },
+      {
+        "x": 0.25,
+        "y": 0.5625
+      }
+    ],
+    "thumb": "/img/mapthumbs/abyss.webp",
+    "coordinates": {
+      "es": "70° 50' AJ\" N, 9° 00' VX\" W",
+      "en": "70° 50' AJ\" N, 9° 00' VX\" W"
+    }
+  },
+  {
+    "id": "ascent",
+    "uuid": "7eaecc1b-4337-bbf6-6ab9-04b8f06b3319",
+    "name": {
+      "es": "Ascent",
+      "en": "Ascent"
+    },
+    "minimap": "/img/minimaps/ascent.webp",
+    "aspect": 1,
+    "zones": [
+      {
+        "x": 0.375,
+        "y": 0.1875
+      },
+      {
+        "x": 0.25,
+        "y": 0.5625
+      },
+      {
+        "x": 0.3125,
+        "y": 0.75
+      },
+      {
+        "x": 0.1875,
+        "y": 0.375
+      },
+      {
+        "x": 0.5,
+        "y": 0.375
+      },
+      {
+        "x": 0.4375,
+        "y": 0.5625
+      },
+      {
+        "x": 0.8125,
+        "y": 0.5625
+      },
+      {
+        "x": 0.6875,
+        "y": 0.375
+      }
+    ],
+    "thumb": "/img/mapthumbs/ascent.webp",
+    "coordinates": {
+      "es": "45°26'BF'N,12°20'Q'E",
+      "en": "45°26'BF'N,12°20'Q'E"
+    }
+  },
+  {
+    "id": "bind",
+    "uuid": "2c9d57ec-4431-9c5e-2939-8f9ef6dd5cba",
+    "name": {
+      "es": "Bind",
+      "en": "Bind"
+    },
+    "minimap": "/img/minimaps/bind.webp",
+    "aspect": 1,
+    "zones": [
+      {
+        "x": 0.6875,
+        "y": 0.3125
+      },
+      {
+        "x": 0.3125,
+        "y": 0.5625
+      },
+      {
+        "x": 0.25,
+        "y": 0.3125
+      },
+      {
+        "x": 0.75,
+        "y": 0.5
+      },
+      {
+        "x": 0.5,
+        "y": 0.5625
+      }
+    ],
+    "thumb": "/img/mapthumbs/bind.webp",
+    "coordinates": {
+      "es": "34°2'A'N,6°51'Z'W",
+      "en": "34°2'A'N,6°51'Z'W"
+    }
+  },
+  {
+    "id": "breeze",
+    "uuid": "2fb9a4fd-47b8-4e7d-a969-74b4046ebd53",
+    "name": {
+      "es": "Breeze",
+      "en": "Breeze"
+    },
+    "minimap": "/img/minimaps/breeze.webp",
+    "aspect": 1,
+    "zones": [
+      {
+        "x": 0.375,
+        "y": 0.1875
+      },
+      {
+        "x": 0.5625,
+        "y": 0.1875
+      },
+      {
+        "x": 0.8125,
+        "y": 0.4375
+      },
+      {
+        "x": 0.1875,
+        "y": 0.3125
+      },
+      {
+        "x": 0.1875,
+        "y": 0.5
+      },
+      {
+        "x": 0.4375,
+        "y": 0.75
+      },
+      {
+        "x": 0.375,
+        "y": 0.375
+      },
+      {
+        "x": 0.625,
+        "y": 0.75
+      }
+    ],
+    "thumb": "/img/mapthumbs/breeze.webp",
+    "coordinates": {
+      "es": "26°11'AG\"N 71°10'WY\"O",
+      "en": "26°11'AG\"N 71°10'WY\"W"
+    }
+  },
+  {
+    "id": "corrode",
+    "uuid": "1c18ab1f-420d-0d8b-71d0-77ad3c439115",
+    "name": {
+      "es": "Corrode",
+      "en": "Corrode"
+    },
+    "minimap": "/img/minimaps/corrode.webp",
+    "aspect": 1,
+    "zones": [
+      {
+        "x": 0.375,
+        "y": 0.1875
+      },
+      {
+        "x": 0.75,
+        "y": 0.4375
+      },
+      {
+        "x": 0.5625,
+        "y": 0.4375
+      },
+      {
+        "x": 0.4375,
+        "y": 0.75
+      },
+      {
+        "x": 0.5625,
+        "y": 0.25
+      },
+      {
+        "x": 0.625,
+        "y": 0.625
+      },
+      {
+        "x": 0.25,
+        "y": 0.8125
+      },
+      {
+        "x": 0.8125,
+        "y": 0.625
+      }
+    ],
+    "thumb": "/img/mapthumbs/corrode.webp",
+    "coordinates": {
+      "es": "48° 38' FH\" N8, 1° 33' YV\" W8",
+      "en": "48° 38' FH\" N8, 1° 33' YV\" W8"
+    }
+  },
+  {
+    "id": "fracture",
+    "uuid": "b529448b-4d60-346e-e89e-00a4c527a405",
+    "name": {
+      "es": "Fracture",
+      "en": "Fracture"
+    },
+    "minimap": "/img/minimaps/fracture.webp",
+    "aspect": 1,
+    "zones": [
+      {
+        "x": 0.25,
+        "y": 0.4375
+      },
+      {
+        "x": 0.1875,
+        "y": 0.625
+      },
+      {
+        "x": 0.4375,
+        "y": 0.4375
+      },
+      {
+        "x": 0.75,
+        "y": 0.625
+      },
+      {
+        "x": 0.5625,
+        "y": 0.8125
+      },
+      {
+        "x": 0.375,
+        "y": 0.1875
+      },
+      {
+        "x": 0.6875,
+        "y": 0.4375
+      },
+      {
+        "x": 0.5625,
+        "y": 0.1875
+      }
+    ],
+    "thumb": "/img/mapthumbs/fracture.webp",
+    "coordinates": {
+      "es": "35°48'BI\"N 106°08'YQ\"O",
+      "en": "35°48'BI\"N 106°08'YQ\"W"
+    }
+  },
+  {
+    "id": "haven",
+    "uuid": "2bee0dc9-4ffe-519b-1cbd-7fbe763a6047",
+    "name": {
+      "es": "Haven",
+      "en": "Haven"
+    },
+    "minimap": "/img/minimaps/haven.webp",
+    "aspect": 1,
+    "zones": [
+      {
+        "x": 0.375,
+        "y": 0.25
+      },
+      {
+        "x": 0.6875,
+        "y": 0.5
+      },
+      {
+        "x": 0.4375,
+        "y": 0.5625
+      },
+      {
+        "x": 0.375,
+        "y": 0.75
+      },
+      {
+        "x": 0.25,
+        "y": 0.4375
+      },
+      {
+        "x": 0.5625,
+        "y": 0.25
+      },
+      {
+        "x": 0.6875,
+        "y": 0.6875
+      },
+      {
+        "x": 0.875,
+        "y": 0.5
+      }
+    ],
+    "thumb": "/img/mapthumbs/haven.webp",
+    "coordinates": {
+      "es": "27°28'A'N,89°38'WZ'E",
+      "en": "27°28'A'N,89°38'WZ'E"
+    }
+  },
+  {
+    "id": "icebox",
+    "uuid": "e2ad5c54-4114-a870-9641-8ea21279579a",
+    "name": {
+      "es": "Icebox",
+      "en": "Icebox"
+    },
+    "minimap": "/img/minimaps/icebox.webp",
+    "aspect": 1,
+    "zones": [
+      {
+        "x": 0.6875,
+        "y": 0.5
+      },
+      {
+        "x": 0.75,
+        "y": 0.6875
+      },
+      {
+        "x": 0.375,
+        "y": 0.75
+      },
+      {
+        "x": 0.25,
+        "y": 0.5625
+      },
+      {
+        "x": 0.5625,
+        "y": 0.75
+      },
+      {
+        "x": 0.5,
+        "y": 0.1875
+      },
+      {
+        "x": 0.5,
+        "y": 0.375
+      },
+      {
+        "x": 0.6875,
+        "y": 0.1875
+      }
+    ],
+    "thumb": "/img/mapthumbs/icebox.webp",
+    "coordinates": {
+      "es": "76°44' A\"N 149°30' Z\"E",
+      "en": "76°44' A\"N 149°30' Z\"E"
+    }
+  },
+  {
+    "id": "lotus",
+    "uuid": "2fe4ed3a-450a-948b-6d6b-e89a78e680a9",
+    "name": {
+      "es": "Lotus",
+      "en": "Lotus"
+    },
+    "minimap": "/img/minimaps/lotus.webp",
+    "aspect": 1,
+    "zones": [
+      {
+        "x": 0.8125,
+        "y": 0.3125
+      },
+      {
+        "x": 0.8125,
+        "y": 0.5
+      },
+      {
+        "x": 0.625,
+        "y": 0.25
+      },
+      {
+        "x": 0.3125,
+        "y": 0.375
+      },
+      {
+        "x": 0.375,
+        "y": 0.6875
+      },
+      {
+        "x": 0.5,
+        "y": 0.4375
+      },
+      {
+        "x": 0.5625,
+        "y": 0.6875
+      },
+      {
+        "x": 0.1875,
+        "y": 0.5625
+      }
+    ],
+    "thumb": "/img/mapthumbs/lotus.webp",
+    "coordinates": {
+      "es": "14°07'AD.4''N8 74°53'XY''E8",
+      "en": "14°07'AD.4\"N8 74°53'XY\"E8"
+    }
+  },
+  {
+    "id": "pearl",
+    "uuid": "fd267378-4d1d-484f-ff52-77821ed10dc2",
+    "name": {
+      "es": "Pearl",
+      "en": "Pearl"
+    },
+    "minimap": "/img/minimaps/pearl.webp",
+    "aspect": 1,
+    "zones": [
+      {
+        "x": 0.5,
+        "y": 0.75
+      },
+      {
+        "x": 0.8125,
+        "y": 0.25
+      },
+      {
+        "x": 0.1875,
+        "y": 0.4375
+      },
+      {
+        "x": 0.5,
+        "y": 0.5625
+      },
+      {
+        "x": 0.6875,
+        "y": 0.625
+      },
+      {
+        "x": 0.8125,
+        "y": 0.4375
+      },
+      {
+        "x": 0.375,
+        "y": 0.3125
+      },
+      {
+        "x": 0.3125,
+        "y": 0.75
+      }
+    ],
+    "thumb": "/img/mapthumbs/pearl.webp",
+    "coordinates": {
+      "es": "38°42'ED''N8 9°08'XS''W8",
+      "en": "38°42'ED\"N8 9°08'XS\"W8"
+    }
+  },
+  {
+    "id": "split",
+    "uuid": "d960549e-485c-e861-8d71-aa9d1aed12a2",
+    "name": {
+      "es": "Split",
+      "en": "Split"
+    },
+    "minimap": "/img/minimaps/split.webp",
+    "aspect": 1,
+    "zones": [
+      {
+        "x": 0.375,
+        "y": 0.25
+      },
+      {
+        "x": 0.5625,
+        "y": 0.25
+      },
+      {
+        "x": 0.6875,
+        "y": 0.6875
+      },
+      {
+        "x": 0.3125,
+        "y": 0.875
+      },
+      {
+        "x": 0.5,
+        "y": 0.5625
+      },
+      {
+        "x": 0.5,
+        "y": 0.8125
+      },
+      {
+        "x": 0.1875,
+        "y": 0.25
+      },
+      {
+        "x": 0.75,
+        "y": 0.25
+      }
+    ],
+    "thumb": "/img/mapthumbs/split.webp",
+    "coordinates": {
+      "es": "35°41'CD'N,139°41'WX'E",
+      "en": "35°41'CD'N,139°41'WX'E"
+    }
+  },
+  {
+    "id": "summit",
+    "uuid": "756da597-416b-c0f2-f47b-afbdf28670bc",
+    "name": {
+      "es": "Summit",
+      "en": "Summit"
+    },
+    "minimap": "/img/minimaps/summit.webp",
+    "aspect": 1,
+    "zones": [
+      {
+        "x": 0.1875,
+        "y": 0.3125
+      },
+      {
+        "x": 0.75,
+        "y": 0.3125
+      },
+      {
+        "x": 0.625,
+        "y": 0.6875
+      },
+      {
+        "x": 0.375,
+        "y": 0.25
+      },
+      {
+        "x": 0.1875,
+        "y": 0.5
+      },
+      {
+        "x": 0.5625,
+        "y": 0.375
+      },
+      {
+        "x": 0.375,
+        "y": 0.5
+      },
+      {
+        "x": 0.75,
+        "y": 0.5
+      }
+    ],
+    "thumb": "/img/mapthumbs/summit.webp",
+    "coordinates": {
+      "es": "29° 18' FC\" N, 110° 25' ZQ\" E",
+      "en": "29° 18' FC\" N, 110° 25' ZQ\" E"
+    }
+  },
+  {
+    "id": "sunset",
+    "uuid": "92584fbe-486a-b1b2-9faa-39b0f486b498",
+    "name": {
+      "es": "Sunset",
+      "en": "Sunset"
+    },
+    "minimap": "/img/minimaps/sunset.webp",
+    "aspect": 1,
+    "zones": [
+      {
+        "x": 0.8125,
+        "y": 0.375
+      },
+      {
+        "x": 0.5,
+        "y": 0.125
+      },
+      {
+        "x": 0.6875,
+        "y": 0.1875
+      },
+      {
+        "x": 0.1875,
+        "y": 0.375
+      },
+      {
+        "x": 0.4375,
+        "y": 0.375
+      },
+      {
+        "x": 0.1875,
+        "y": 0.5625
+      },
+      {
+        "x": 0.6875,
+        "y": 0.5625
+      },
+      {
+        "x": 0.5,
+        "y": 0.5625
+      }
+    ],
+    "thumb": "/img/mapthumbs/sunset.webp",
+    "coordinates": {
+      "es": "34° 2' C'' N, 118° 12' YT'' O",
+      "en": "34° 2′ C″ N, 118° 12′ YT″ W"
+    }
+  }
+]

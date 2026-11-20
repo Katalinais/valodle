@@ -104,6 +104,23 @@ export const SkinSchema = z.object({
 });
 export type Skin = z.infer<typeof SkinSchema>;
 
+export const MapSchema = z.object({
+  id: z.string(),
+  uuid: z.string(),
+  name: LocalizedSchema,
+  /** Minimapa táctico (fondo transparente): de su silueta se recorta la zona a adivinar. */
+  minimap: ImageSrcSchema,
+  /** Relación de aspecto (ancho/alto) del minimapa. */
+  aspect: z.number().positive(),
+  /** Centros de las zonas jugables (normalizados 0..1); cada día se elige una. */
+  zones: z.array(z.object({ x: z.number().min(0).max(1), y: z.number().min(0).max(1) })).min(1),
+  /** Banner horizontal para listas. */
+  thumb: ImageSrcSchema.nullable(),
+  /** Coordenadas ficticias del mapa (pista); null si la API no las trae. */
+  coordinates: LocalizedSchema.nullable(),
+});
+export type GameMap = z.infer<typeof MapSchema>;
+
 /** Máscara de opacidad gruesa por skin (solo para tests). */
 export const SkinMaskSchema = z.object({
   id: z.string(),

@@ -1,4 +1,4 @@
-import { TODO, type Ability, type Agent, type Quote, type Skin } from "./schema";
+import { TODO, type Ability, type Agent, type GameMap, type Quote, type Skin } from "./schema";
 
 /** Id estable de una frase: agente + slug del texto en inglés. */
 export function quoteId(q: Pick<Quote, "agentId" | "text">): string {
@@ -17,6 +17,7 @@ export type PoolData = {
   quotes: Quote[];
   emojis: Record<string, string[]>;
   skins: Skin[];
+  maps: GameMap[];
 };
 
 /**
@@ -39,5 +40,6 @@ export function poolIds(data: PoolData) {
       .filter((a) => data.emojis[a.id] && !data.emojis[a.id].includes(TODO))
       .map((a) => a.id),
     skin: data.skins.map((s) => s.id),
+    map: data.maps.map((m) => m.id),
   };
 }

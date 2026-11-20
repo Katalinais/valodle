@@ -6,6 +6,7 @@ export const MODES = [
   { id: "quote", slug: "frase", icon: "💬" },
   { id: "emoji", slug: "emoji", icon: "😶" },
   { id: "skin", slug: "skin", icon: "🔫" },
+  { id: "map", slug: "mapa", icon: "🗺️" },
 ] as const;
 
 export type ModeId = (typeof MODES)[number]["id"];

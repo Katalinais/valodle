@@ -16,7 +16,8 @@
     "status": {
       "new": "Sin jugar",
       "playing": "En curso",
-      "done": "Completado"
+      "done": "Completado",
+      "soon": "Próximamente"
     },
     "today": "Reto de hoy",
     "progress": "{done} de {total} completados",
@@ -48,7 +49,12 @@
       "prompt": "¿Qué skin es esta?",
       "desc": "Solo skins de pago"
     },
-    "label": "Modo {n} de {total}"
+    "label": "Modo {n} de {total}",
+    "map": {
+      "title": "Mapa",
+      "prompt": "¿De qué mapa es esta silueta?",
+      "desc": "Adivina por la silueta del minimapa"
+    }
   },
   "daily": {
     "challenge": "Reto #{n}",
@@ -174,5 +180,15 @@
     "disclaimer": "{site} no está respaldado por Riot Games y no refleja las opiniones de Riot Games ni de nadie oficialmente involucrado en la producción o gestión de las propiedades de Riot Games. Riot Games y todas las propiedades asociadas son marcas comerciales o registradas de Riot Games, Inc.",
     "credits": "Datos e imágenes vía {api}.",
     "fanProject": "Proyecto de fans no oficial y gratuito."
+  },
+  "map": {
+    "coordsHint": "Coordenadas: {coords}",
+    "coordsHintIn": "Pista de coordenadas en {n} intento(s)",
+    "soonTitle": "Próximamente",
+    "soonText": "Estamos preparando los mapas. ¡Vuelve muy pronto!",
+    "alt": "Fragmento de la silueta del minimapa a adivinar",
+    "placeholder": "Nombre del mapa…",
+    "colorsHint": "Colores del minimapa revelados",
+    "colorsHintIn": "Colores en {n} intento(s)"
   }
 }

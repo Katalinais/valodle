@@ -22,14 +22,18 @@ export function useModeGame(
   const hydrated = useStoreHydrated();
   const today = hydrated ? rawToday : null;
 
+  // Pool vacío (p. ej. datos aún no generados): el modo queda como "próximamente".
+  const available = Object.keys(registry).length > 0;
   const answerId = useMemo(
-    () => (today ? answerIdForDay(mode, today.dayIndex, registry) : null),
-    [mode, registry, today],
+    () => (today && available ? answerIdForDay(mode, today.dayIndex, registry) : null),
+    [available, mode, registry, today],
   );
   const yesterdayId = useMemo(
     () =>
-      today && today.dayIndex >= 1 ? answerIdForDay(mode, today.dayIndex - 1, registry) : null,
-    [mode, registry, today],
+      today && available && today.dayIndex >= 1
+        ? answerIdForDay(mode, today.dayIndex - 1, registry)
+        : null,
+    [available, mode, registry, today],
   );
 
   const game =
@@ -59,5 +63,5 @@ export function useModeGame(
     [mode, setBonusAction, today],
   );
 
-  return { today, answerId, target, yesterdayId, game, submit, setBonus };
+  return { today, available, answerId, target, yesterdayId, game, submit, setBonus };
 }
